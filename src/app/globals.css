@@ -3,16 +3,19 @@
 @tailwind utilities;
 
 @layer base {
-
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
 
+  body {
+    @apply bg-back-pattern bg-repeat bg-[length:550px]
+  }
+
   html {
     font-family: var(--font-iranyekan);
-}
+  }
 
   ul {
     list-style: none;
