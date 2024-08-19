@@ -15,7 +15,7 @@ const Navbar = () => {
   const closeNav = () => setNav(false);
 
   return (
-    <div className="relative bg-white shadow-custom-blue rounded-full max-w-[80%] sm:max-w-[80%] lg:max-w-[70%] xl:max-w-[60%] mx-auto mt-7 z-50">
+    <div className="relative bg-white shadow-custom-blue rounded-full max-w-[80%] sm:max-w-[80%] lg:max-w-[70%] xl:max-w-[60%] mx-auto my-7 z-50">
       <div className="relative flex items-center justify-between tracking-wider z-50">
 
         {/* logo */}
