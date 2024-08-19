@@ -11,7 +11,7 @@
 
   body {
     @apply bg-back-pattern bg-repeat bg-[length:550px];
-    font-family: var(--font-iranyekan);
+    font-family: var(--font-kalameh);
   }
 
   ul {

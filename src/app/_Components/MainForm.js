@@ -16,14 +16,14 @@ import {
 
 const MainForm = () => {
   return (
-    <div>
+    <div className="w-full h-full "> {/*flex justify-center items-center*/}
       <Box
         component="form"
         noValidate
         maxWidth="80%"
-        className=" bg-purple-400"
+        sx={{backgroundColor:'rgba(255, 255, 255, 0.55)'}}
       >
-        <p className="">
+        <p className="text-blue font-semibold">
           همکار محترم جهت استفاده از امکانات سایت لطفا وارد شوید
         </p>
       </Box>
