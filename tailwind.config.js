@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -15,7 +14,10 @@ module.exports = {
         gray: "#d9d9d9",
         black: "#000000",
       },
+      boxShadow: {
+        'custom-blue': '0px -2px 10px rgba(0, 64, 128, 0.1), 0px 6px 20px rgba(0, 64, 128, 0.4)',
+      },
     },
-    plugins: [],
   },
+  plugins: [],
 };
