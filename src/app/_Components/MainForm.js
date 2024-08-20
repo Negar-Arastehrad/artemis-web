@@ -68,7 +68,7 @@ const MainForm = () => {
         noValidate
         maxWidth="80%"
         onSubmit={handleSubmit(onSubmit)}
-        sx={{ backgroundColor: "rgba(255, 255, 255, 0.55)" }}
+        sx={{ backgroundColor: "rgba(255, 255, 255, 0.4)" }}
         className="m-auto rounded-xl py-8 px-8"
       >
         <p className="text-blue font-semibold text-center mb-5">
@@ -91,6 +91,7 @@ const MainForm = () => {
           variant="outlined"
           required
           fullWidth
+          label="رمز عبور"
           name="password"
           {...register("password")}
           error={!!errors.password}
