@@ -3,6 +3,8 @@ import { Figtree } from "next/font/google";
 import "./globals.css";
 import Navbar from "./_Components/Navbar";
 import RTL from "./_Components/RTL";
+import { ThemeProvider } from "@mui/material/styles";
+import theme from './theme'
 
 const figtree = Figtree({
   display: "swap",
@@ -166,10 +168,12 @@ export default function RootLayout({ children }) {
   return (
     <html dir="rtl" className={`dark ${figtree.variable} ${kalameh.variable}`}>
       <body>
+      <ThemeProvider theme={theme}>
         <RTL>
           <Navbar />
           <main>{children}</main>
         </RTL>
+        </ThemeProvider>
       </body>
     </html>
   );

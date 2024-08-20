@@ -15,9 +15,8 @@ const Navbar = () => {
   const closeNav = () => setNav(false);
 
   return (
-    <div className="relative bg-white shadow-custom-blue rounded-full max-w-[80%] sm:max-w-[80%] lg:max-w-[70%] xl:max-w-[60%] mx-auto my-7 z-50">
+    <div className="relative bg-white shadow-custom-blue rounded-full max-w-[80%] sm:max-w-[80%] lg:max-w-[70%] xl:max-w-[60%] mx-auto mt-7 z-50">
       <div className="relative flex items-center justify-between tracking-wider z-50">
-
         {/* logo */}
         <div className="w-16 m-2">
           <Link href="/">
@@ -38,7 +37,9 @@ const Navbar = () => {
           <li className="border-l-2 border-gray px-4 md:px-6 lg:px-10">
             <Link
               href="/"
-              className={pathname === "/" ? "border-b-2 border-blue" : ""}
+              className={`nav-li ${
+                pathname === "/" ? "border-b-2 border-blue" : ""
+              }`}
             >
               صفحه اصلی
             </Link>
@@ -46,7 +47,9 @@ const Navbar = () => {
           <li className="border-l-2 border-gray px-4 md:px-6 lg:px-10">
             <Link
               href="/about"
-              className={pathname === "/about" ? "border-b-2 border-blue" : ""}
+              className={`nav-li ${
+                pathname === "/about" ? "border-b-2 border-blue" : ""
+              }`}
             >
               درباره ما
             </Link>
@@ -54,9 +57,9 @@ const Navbar = () => {
           <li className="border-l-2 border-gray px-4 md:px-6 lg:px-10">
             <Link
               href="/automation"
-              className={
+              className={`nav-li ${
                 pathname === "/automation" ? "border-b-2 border-blue" : ""
-              }
+              }`}
             >
               اتوماسیون اداری
             </Link>
@@ -64,9 +67,9 @@ const Navbar = () => {
           <li className="ml-1 px-4 md:px-6 lg:px-10">
             <Link
               href="/guidance"
-              className={
+              className={`nav-li ${
                 pathname === "/guidance" ? "border-b-2 border-blue" : ""
-              }
+              }`}
             >
               سامانه راهنمایان آرتمیس
             </Link>
@@ -86,7 +89,9 @@ const Navbar = () => {
         >
           <Link
             href="/"
-            className={pathname === "/" ? "border-b-2 border-blue" : ""}
+            className={`nav-li ${
+              pathname === "/" ? "border-b-2 border-blue" : ""
+            }`}
           >
             صفحه اصلی
           </Link>
@@ -97,7 +102,9 @@ const Navbar = () => {
         >
           <Link
             href="/about"
-            className={pathname === "/about" ? "border-b-2 border-blue" : ""}
+            className={`nav-li ${
+              pathname === "/about" ? "border-b-2 border-blue" : ""
+            }`}
           >
             درباره ما
           </Link>
@@ -108,9 +115,9 @@ const Navbar = () => {
         >
           <Link
             href="/automation"
-            className={
+            className={`nav-li ${
               pathname === "/automation" ? "border-b-2 border-blue" : ""
-            }
+            }`}
           >
             اتوماسیون اداری
           </Link>
@@ -118,13 +125,14 @@ const Navbar = () => {
         <li onClick={closeNav} className="py-4 w-[90%] m-auto">
           <Link
             href="/guidance"
-            className={pathname === "/guidance" ? "border-b-2 border-blue" : ""}
+            className={`nav-li ${
+              pathname === "/guidance" ? "border-b-2 border-blue" : ""
+            }`}
           >
             سامانه راهنمایان آرتمیس
           </Link>
         </li>
       </ul>
-      
     </div>
   );
 };
