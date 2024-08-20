@@ -15,7 +15,7 @@ import hero12 from "/public/Images/sliders/van2.png";
 import Image from "next/image";
 import {
   FiberManualRecord,
-  ArrowBackIos,
+  ArrowBackIosNew,
   ArrowForwardIos,
 } from "@mui/icons-material";
 import "../../../public/Images/logo1.png";
@@ -64,13 +64,13 @@ const Slider = () => {
 
   const nextSlide = () => {
     setCurrentSlide(
-      currentSlide === SliderData.length - 1 ? 0 : currentSlide + 1
+      currentSlide === 0 ? SliderData.length - 1 : currentSlide - 1
     );
   };
 
   const prevSlide = () => {
     setCurrentSlide(
-      currentSlide === 0 ? SliderData.length - 1 : currentSlide - 1
+      currentSlide === SliderData.length - 1 ? 0 : currentSlide + 1
     );
   };
 
@@ -84,56 +84,58 @@ const Slider = () => {
 
   return (
     <div className="w-full h-full flex justify-center items-center">
-      <div>
-        {SliderData.map((slide, index) => {
-          return (
-            <div
-              key={index}
-              className={
-                index === currentSlide ? "relative" : "relative hidden"
-              }
+      {SliderData.map((slide, index) => {
+        return (
+          <div
+            key={index}
+            className={
+              index === currentSlide ? "relative w-full" : "relative hidden"
+            }
+          >
+            {/* Forward Arrow */}
+            <span
+              className="absolute right-[2.2%] top-[49%] -translate-y-1/2 select-none cursor-pointer text-blue hover:bg-[#0040801e] rounded-full p-2 transition duration-300 ease-in-out"
+              onClick={nextSlide}
             >
-              <span
-                className="absolute top-[45%] select-none cursor-pointer text-primary left-[40px]"
-                onClick={prevSlide}
-              >
-                <ArrowBackIos />
-              </span>
+              <ArrowForwardIos style={{ fontSize: "30px" }} />
+            </span>
 
-              {index === currentSlide && (
-                <>
-                  <div>
-                    <Image src={SliderData.image} alt="/" className="w-[95%]" />
-                  </div>
-                </>
-              )}
+            {/* Image */}
+            {index === currentSlide && (
+              <>
+                <div className="rounded-xl overflow-hidden">
+                  <Image src={slide.image} alt="/" className="w-full h-full" />
+                </div>
+              </>
+            )}
 
-              <span
-                className="absolute top-[45%] select-none cursor-pointer text-primary right-[80px]"
-                onClick={nextSlide}
-              >
-                <ArrowForwardIos />
-              </span>
+            {/* Back Arrow */}
+            <span
+              className="absolute left-[2.2%] top-[50%] -translate-y-1/2 select-none cursor-pointer text-blue hover:bg-[#0040801e] rounded-full p-2 transition duration-300 ease-in-out"
+              onClick={prevSlide}
+            >
+              <ArrowBackIosNew style={{ fontSize: "30px" }} />
+            </span>
 
-              <div className="flex justify-center py-2 absolute bottom-0 left-[24%]">
-                {SliderData.map((slide, slideIndex) => (
-                  <div
-                    key={slideIndex}
-                    onClick={() => goToSlide(slideIndex)}
-                    className={
-                      currentSlide === slideIndex
-                        ? "text-2xl cursor-pointer text-primary"
-                        : "text-2xl cursor-pointer"
-                    }
-                  >
-                    <FiberManualRecord />
-                  </div>
-                ))}
-              </div>
+            {/* Dots */}
+            <div className="flex justify-center items-center gap-2 mt-2">
+              {SliderData.map((slide, index) => (
+                <div
+                  key={index}
+                  onClick={() => goToSlide(index)}
+                  className={
+                    currentSlide === index
+                      ? "cursor-pointer text-blue"
+                      : "cursor-pointer text-[#00408075]"
+                  }
+                >
+                  <FiberManualRecord style={{ fontSize: "15px" }} />
+                </div>
+              ))}
             </div>
-          );
-        })}
-      </div>
+          </div>
+        );
+      })}
     </div>
   );
 };
