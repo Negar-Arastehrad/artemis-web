@@ -66,10 +66,9 @@ const MainForm = () => {
       <Box
         component="form"
         noValidate
-        maxWidth="80%"
+        maxWidth='95%'
         onSubmit={handleSubmit(onSubmit)}
-        sx={{ backgroundColor: "rgba(255, 255, 255, 0.4)" }}
-        className="m-auto rounded-xl py-8 px-8"
+        className="m-auto rounded-xl py-8 px-8 bg-glass"
       >
         <p className="text-blue font-semibold text-center mb-5">
           همکار محترم جهت استفاده از امکانات سایت لطفا وارد شوید

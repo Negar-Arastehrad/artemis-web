@@ -15,6 +15,7 @@ import hero12 from "/public/Images/sliders/van2.png";
 import Image from "next/image";
 import {
   FiberManualRecord,
+  RadioButtonUnchecked,
   ArrowBackIosNew,
   ArrowForwardIos,
 } from "@mui/icons-material";
@@ -83,7 +84,7 @@ const Slider = () => {
   }
 
   return (
-    <div className="w-full h-full flex justify-center items-center">
+    <div className="w-full h-full flex justify-center items-center max-w-[95%]">
       {SliderData.map((slide, index) => {
         return (
           <div
@@ -94,10 +95,10 @@ const Slider = () => {
           >
             {/* Forward Arrow */}
             <span
-              className="absolute right-[2.2%] top-[49%] -translate-y-1/2 select-none cursor-pointer text-blue hover:bg-[#0040801e] rounded-full p-2 transition duration-300 ease-in-out"
+              className="absolute right-[2.2%] top-[49%] -translate-y-1/2 select-none cursor-pointer text-blue hover:bg-[#0040801e] rounded-full p-[6px] transition duration-300 ease-in-out"
               onClick={nextSlide}
             >
-              <ArrowForwardIos style={{ fontSize: "30px" }} />
+              <ArrowForwardIos style={{ fontSize: "20px" }} />
             </span>
 
             {/* Image */}
@@ -111,10 +112,10 @@ const Slider = () => {
 
             {/* Back Arrow */}
             <span
-              className="absolute left-[2.2%] top-[50%] -translate-y-1/2 select-none cursor-pointer text-blue hover:bg-[#0040801e] rounded-full p-2 transition duration-300 ease-in-out"
+              className="absolute left-[2.2%] top-[50%] -translate-y-1/2 select-none cursor-pointer text-blue hover:bg-[#0040801e] rounded-full p-[6px] transition duration-300 ease-in-out"
               onClick={prevSlide}
             >
-              <ArrowBackIosNew style={{ fontSize: "30px" }} />
+              <ArrowBackIosNew style={{ fontSize: "20px" }} />
             </span>
 
             {/* Dots */}
@@ -126,10 +127,14 @@ const Slider = () => {
                   className={
                     currentSlide === index
                       ? "cursor-pointer text-blue"
-                      : "cursor-pointer text-[#00408075]"
+                      : "cursor-pointer text-red-500"
                   }
                 >
-                  <FiberManualRecord style={{ fontSize: "15px" }} />
+                  {currentSlide === index ? (
+                    <FiberManualRecord style={{ fontSize: "20px" }} />
+                  ) : (
+                    <RadioButtonUnchecked style={{ fontSize: "15px" }} />
+                  )}
                 </div>
               ))}
             </div>
