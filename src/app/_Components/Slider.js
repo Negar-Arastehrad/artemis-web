@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import hero1 from "/public/Images/sliders/antalya-egh.png";
 import hero2 from "/public/Images/sliders/antalya-lux.png";
 import hero3 from "/public/Images/sliders/antalya-pish.png";
@@ -62,6 +62,12 @@ const SliderData = [
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const slideInterval = 3000; 
+
+  useEffect(() => {
+    const intervalId = setInterval(nextSlide, slideInterval);
+    return () => clearInterval(intervalId);
+  }, [currentSlide]);
 
   const nextSlide = () => {
     setCurrentSlide(
@@ -84,7 +90,7 @@ const Slider = () => {
   }
 
   return (
-    <div className="w-full h-full flex justify-center items-center max-w-[95%]">
+    <div className="w-full h-full flex justify-center items-center max-w-[95%] group">
       {SliderData.map((slide, index) => {
         return (
           <div
@@ -95,7 +101,7 @@ const Slider = () => {
           >
             {/* Forward Arrow */}
             <span
-              className="absolute right-[2.2%] top-[49%] -translate-y-1/2 select-none cursor-pointer text-blue hover:bg-[#0040801e] rounded-full p-[6px] transition duration-300 ease-in-out"
+              className="hidden group-hover:block absolute right-[2.2%] top-[49%] -translate-y-1/2 select-none cursor-pointer text-blue bg-[#0040801e] rounded-full p-[6px]"
               onClick={nextSlide}
             >
               <ArrowForwardIos style={{ fontSize: "20px" }} />
@@ -112,7 +118,7 @@ const Slider = () => {
 
             {/* Back Arrow */}
             <span
-              className="absolute left-[2.2%] top-[50%] -translate-y-1/2 select-none cursor-pointer text-blue hover:bg-[#0040801e] rounded-full p-[6px] transition duration-300 ease-in-out"
+              className="hidden group-hover:block absolute left-[2.2%] top-[50%] -translate-y-1/2 select-none cursor-pointer text-blue bg-[#0040801e] rounded-full p-[6px]"
               onClick={prevSlide}
             >
               <ArrowBackIosNew style={{ fontSize: "20px" }} />
