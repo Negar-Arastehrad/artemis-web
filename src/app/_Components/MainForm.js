@@ -13,7 +13,12 @@ import {
   IconButton,
   InputAdornment,
 } from "@mui/material";
-import { Visibility, VisibilityOff, Person, PeopleAlt } from "@mui/icons-material";
+import {
+  Visibility,
+  VisibilityOff,
+  Person,
+  PeopleAlt,
+} from "@mui/icons-material";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -36,7 +41,6 @@ const TextFieldStyle = {
 };
 
 const MainForm = () => {
-
   const [showPassword, setShowPassword] = useState(false);
 
   //Validation
@@ -66,7 +70,7 @@ const MainForm = () => {
       <Box
         component="form"
         noValidate
-        maxWidth='95%'
+        maxWidth="95%"
         onSubmit={handleSubmit(onSubmit)}
         className="m-auto rounded-xl py-8 px-8 bg-glass"
       >
@@ -118,11 +122,7 @@ const MainForm = () => {
           <FormGroup sx={{ marginLeft: "-.8rem" }}>
             <FormControlLabel
               labelPlacement="start"
-              control={
-                <Checkbox
-                  {...register("checkBox")}
-                />
-              }
+              control={<Checkbox {...register("checkBox")} />}
               label={<Typography color="blue">مرا به خاطر بسپار</Typography>}
             />
           </FormGroup>
@@ -137,10 +137,12 @@ const MainForm = () => {
           fullWidth
           variant="contained"
           sx={{
-            backgroundColor: "blue",
-            "&:hover": {
-              backgroundColor: "hoverBlue",
-            },
+            background: `linear-gradient(
+    90deg,
+    hsla(0, 100%, 64%, 1) 0%,
+    hsla(210, 100%, 30%, 1) 100%
+  );`,
+            color: "white",
             paddingY: ".8rem",
             borderRadius: ".75rem",
             marginY: "2rem",
