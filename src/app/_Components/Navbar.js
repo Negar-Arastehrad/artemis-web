@@ -8,11 +8,13 @@ import { usePathname } from "next/navigation";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
 import { Phone } from "@mui/icons-material";
+import Popover from "@mui/material/Popover";
 
 const Navbar = () => {
   const pathname = usePathname(); // for active link style
 
   const [nav, setNav] = useState(false);
+  const [anchorEl, setAnchorEl] = useState(null); // PopUp
 
   const handleNav = () => {
     setNav(!nav);
@@ -28,18 +30,33 @@ const Navbar = () => {
     document.body.style.overflow = "scroll";
   };
 
+  const handlePhoneOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handlePhoneClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+  const id = open ? "simple-popover" : undefined;
+
   return (
-    <div className="relative z-50">
+    <>
       {/* Overlay */}
-      <div
-        className={`fixed inset-0 bg-black opacity-40 ${
-          nav ? "block" : "hidden"
-        } z-40`}
-        onClick={closeNav}
-      ></div>
+      {nav ? (
+        <div
+          className={`fixed inset-0 bg-black opacity-40 ${
+            nav ? "block" : "hidden"
+          } z-40`}
+          onClick={closeNav}
+        ></div>
+      ) : (
+        ""
+      )}
 
       {/* Main Nav */}
-      <div className="sticky top-0 left-0 right-0 transform bg-white shadow-custom-blue rounded-full max-w-[80%] sm:max-w-[80%] lg:max-w-[70%] xl:max-w-[60%] mx-auto mt-7 z-50">
+      <div className="scroll-m-10 sticky top-0 left-0 right-0 bg-white shadow-custom-blue rounded-full max-w-[80%] sm:max-w-[80%] lg:max-w-[70%] xl:max-w-[60%] mx-auto mt-7 z-50">
         <div className="relative flex items-center justify-between tracking-wider z-50">
           {/* logo */}
           <div className="w-16 m-2">
@@ -99,12 +116,39 @@ const Navbar = () => {
               </Link>
             </li>
           </ul>
-          <div className="  text-white bg-blue rounded-full w-14 h-12 hidden md:flex justify-center items-center cursor-pointer m-2 ">
-            <Link href="tel:02191008802">
-              <Phone />
-            </Link>
+          <div
+            className="text-white bg-blue hover:text-blue hover:bg-white transition duration-300 hover:scale-110 hover:-rotate-[30deg] rounded-full w-14 h-12 hidden md:flex justify-center items-center cursor-pointer m-2"
+            onClick={handlePhoneOpen}
+          >
+            <Phone />
           </div>
         </div>
+
+        {/* Popover for both desktop and mobile */}
+        <Popover
+          id={id}
+          open={open}
+          anchorEl={anchorEl}
+          onClose={handlePhoneClose}
+          anchorOrigin={{
+            vertical: "bottom", // Opens below the icon
+            horizontal: "center", // Centered relative to the icon
+          }}
+          transformOrigin={{
+            vertical: "top", // Aligns the top of the popover with the bottom of the icon
+            horizontal: "center", // Horizontally centered
+          }}
+          sx={{
+            "& .MuiPaper-root": {
+              borderRadius: ".5rem",
+              marginTop:"-.6rem"
+            }
+          }}
+        >
+          <Link href="tel:02191008802">
+            <Image src={telImg} alt="tel" className="w-40" />
+          </Link>
+        </Popover>
 
         {/* Mobile Navigation */}
         <ul
@@ -161,14 +205,15 @@ const Navbar = () => {
               سامانه راهنمایان آرتمیس
             </Link>
           </li>
-          <li className="text-white bg-blue rounded-full w-14 h-14 md:hidden flex justify-center items-center cursor-pointer mr-[1.5rem] mt-2 ">
-            <Link href="tel:02191008802">
-              <Phone />
-            </Link>
+          <li
+            className="text-white bg-blue hover:text-blue hover:bg-white rounded-full w-14 h-14 md:hidden flex justify-center items-center cursor-pointer mr-[1.5rem] mt-2 transition duration-300 hover:scale-110 hover:-rotate-[30deg]"
+            onClick={handlePhoneOpen}
+          >
+            <Phone />
           </li>
         </ul>
       </div>
-    </div>
+    </>
   );
 };
 
