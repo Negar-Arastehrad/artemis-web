@@ -74,7 +74,7 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex items-center justify-center w-full text-blue font-semibold text-sm text-center rounded-full">
+          <ul className="hidden md:flex items-center justify-center w-full text-blue font-semibold text-sm text-center rounded-full mr-2">
             <li className="border-l-2 border-gray px-8">
               <Link
                 href="/"
