@@ -62,7 +62,7 @@ const SliderData = [
 
 const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const slideInterval = 3000; 
+  const slideInterval = 3000;
 
   useEffect(() => {
     const intervalId = setInterval(nextSlide, slideInterval);
@@ -90,7 +90,7 @@ const Slider = () => {
   }
 
   return (
-    <div className="w-full h-full flex justify-center items-center max-w-[93%] m-auto group">
+    <div className="w-full h-full flex justify-center items-center max-w-[95%] md:max-w-[80%] lg:max-w-[95%] m-auto group">
       {SliderData.map((slide, index) => {
         return (
           <div
