@@ -5,6 +5,7 @@ import Navbar from "./_Components/Navbar";
 import RTL from "./_Components/RTL";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from './theme'
+import Footer from "./_Components/Footer";
 
 const figtree = Figtree({
   display: "swap",
@@ -172,6 +173,7 @@ export default function RootLayout({ children }) {
         <RTL>
           <Navbar />
           <main>{children}</main>
+          <Footer />
         </RTL>
         </ThemeProvider>
       </body>
