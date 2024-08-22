@@ -90,7 +90,7 @@ const Slider = () => {
   }
 
   return (
-    <div className="w-full h-full flex justify-center items-center max-w-[93%] group">
+    <div className="w-full h-full flex justify-center items-center max-w-[93%] m-auto group">
       {SliderData.map((slide, index) => {
         return (
           <div
