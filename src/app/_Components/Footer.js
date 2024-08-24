@@ -16,7 +16,7 @@ const Footer = () => {
       className="w-full h-full md:rounded-tr-full rounded-tr-[15rem]"
       style={{
         background:
-          "radial-gradient(circle at center top, hsla(210, 16%, 93%, 1) 8%, hsla(210, 100%, 25%, 1) 100%)",
+          `radial-gradient(circle at 67% 83%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 1%,transparent 1%, transparent 5%,transparent 5%, transparent 100%),radial-gradient(circle at 24% 80%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 27%,transparent 27%, transparent 63%,transparent 63%, transparent 100%),radial-gradient(circle at 23% 5%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 26%,transparent 26%, transparent 82%,transparent 82%, transparent 100%),radial-gradient(circle at 21% 11%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 35%,transparent 35%, transparent 45%,transparent 45%, transparent 100%),radial-gradient(circle at 10% 11%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 21%,transparent 21%, transparent 81%,transparent 81%, transparent 100%),radial-gradient(circle at 19% 61%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 20%,transparent 20%, transparent 61%,transparent 61%, transparent 100%),radial-gradient(circle at 13% 77%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 63%,transparent 63%, transparent 72%,transparent 72%, transparent 100%),radial-gradient(circle at 30% 93%, hsla(317,0%,96%,0.05) 0%, hsla(317,0%,96%,0.05) 33%,transparent 33%, transparent 82%,transparent 82%, transparent 100%),linear-gradient(90deg, rgb(160,182,209),rgb(0,64,128))`,
         
         "@media (max-width: 768px)": {
           background:
@@ -28,7 +28,7 @@ const Footer = () => {
       <div className="w-full h-full hidden md:flex flex-col md:flex-row justify-between max-w-[80%] mx-auto items-stretch pt-8 pb-7">
         <div className="flex flex-col justify-center items-center basis-1/3">
           <Image src={logoImage1} alt="logoImage1" className="w-20 animation-pulse" />
-          <p className="text-blue py-3 font-semibold text-center">
+          <p className="text-white py-3 font-semibold text-center">
             شرکت آرتمیس <br /> کارگزار رسمی تور های خارجی
           </p>
         </div>
@@ -38,15 +38,15 @@ const Footer = () => {
             تماس با ما <div className="w-full h-1 bg-blue rounded-sm absolute top-9 left-0 overflow-hidden"><span className="w-6 h-full bg-white rounded-sm absolute top-0 left-2 animation-border"></span></div>
           </h6>
           <li className="flex justify-center items-center gap-3 mb-4 mt-4 text-sm font-semibold">
-            <PhoneEnabled className="text-blue" />
+            <PhoneEnabled className="text-white" />
             <p className="text-blue">021-91008802</p>
           </li>
           <li className="flex justify-center items-center gap-3 mb-4 text-sm font-semibold">
-            <Email className="text-blue" />
+            <Email className="text-white" />
             <p className="text-blue">info@artemist.com</p>
           </li>
           <li className="flex justify-center items-center mt-4 mx-5 text-sm font-semibold">
-            <Place className="text-blue" />
+            <Place className="text-white" />
             <p className="text-blue text-center">
               کرج, چهارراه هفت تیر, ابتدای بلوار بلال, بن بست نادری, ساختمان
               کریستال, واحد 2, طبقه دوم
@@ -99,22 +99,22 @@ const Footer = () => {
             id="panel2a-header"
             sx={{ borderBottom: "2px solid white", padding: "0", margin: "0" }}
           >
-            <Typography className="text-center text-blue" sx={{fontWeight:"600"}}>
+            <Typography className="text-center text-white" sx={{fontWeight:"600"}}>
               تماس با ما
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <ul className="text-white">
               <li className="flex gap-3 mb-4 mt-4">
-                <PhoneEnabled className="text-blue" />
+                <PhoneEnabled className="text-white" />
                 <Typography>021-91008802</Typography>
               </li>
               <li className="flex gap-3 mb-4">
-                <Email className="text-blue" />
+                <Email className="text-white" />
                 <Typography>info@artemist.com</Typography>
               </li>
               <li className="flex mt-4">
-                <Place className="text-blue" />
+                <Place className="text-white" />
                 <Typography>
                   کرج, چهارراه هفت تیر, ابتدای بلوار بلال, بن بست نادری, ساختمان
                   کریستال, واحد 2, طبقه دوم
@@ -141,7 +141,7 @@ const Footer = () => {
             id="panel3a-header"
             sx={{ borderBottom: "2px solid white", padding: "0", margin: "0" }}
           >
-            <Typography className="text-center text-blue" sx={{fontWeight: '600'}}>
+            <Typography className="text-center text-white" sx={{fontWeight: '600'}}>
               لینک های مهم
             </Typography>
           </AccordionSummary>
@@ -173,9 +173,9 @@ const Footer = () => {
       </div>
 
       {/* Bottom Content */}
-      <hr className="w-[80%] mx-auto  border-b-1 border-white md:border-blue" />
+      <hr className="w-[80%] mx-auto  border-b-1 border-white" />
       <div>
-        <p className="text-white md:text-blue text-center py-3 text-sm">
+        <p className="text-white  text-center py-3 text-sm">
           کلیه حقوق این وب‌سایت متعلق به شرکت آرتمیس است. © ۱۴۰۳
         </p>
       </div>
