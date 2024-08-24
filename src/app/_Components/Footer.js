@@ -16,7 +16,7 @@ const Footer = () => {
       className="w-full h-full md:rounded-tr-full rounded-tr-[15rem]"
       style={{
         background:
-          "linear-gradient(90deg, hsla(210, 100%, 25%, 1) 0%, hsla(0, 0%, 95%, 1) 100%)",
+          "linear-gradient(90deg, hsla(210, 100%, 25%, 1) 8%, hsla(210, 16%, 93%, 1) 100%)",
       }}
     >
       {/* Top Desktop Content */}
@@ -94,21 +94,21 @@ const Footer = () => {
             id="panel2a-header"
             sx={{ borderBottom: "2px solid white", padding: "0", margin: "0" }}
           >
-            <Typography className="font-semibold text-center text-blue">
+            <Typography className="text-center text-blue" sx={{fontWeight:"600"}}>
               تماس با ما
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <ul className="text-white">
-              <li className="flex gap-3 mb-4 mt-4 text-sm">
+              <li className="flex gap-3 mb-4 mt-4">
                 <PhoneEnabled className="text-blue" />
                 <Typography>02191008802</Typography>
               </li>
-              <li className="flex gap-3 mb-4 text-sm">
+              <li className="flex gap-3 mb-4">
                 <Email className="text-blue" />
                 <Typography>info@artemist.com</Typography>
               </li>
-              <li className="flex mt-4  text-sm">
+              <li className="flex mt-4">
                 <Place className="text-blue" />
                 <Typography>
                   کرج, چهارراه هفت تیر, ابتدای بلوار بلال, بن بست نادری, ساختمان
@@ -136,28 +136,28 @@ const Footer = () => {
             id="panel3a-header"
             sx={{ borderBottom: "2px solid white", padding: "0", margin: "0" }}
           >
-            <Typography className="font-semibold text-center text-blue">
+            <Typography className="text-center text-blue" sx={{fontWeight: '600'}}>
               لینک های مهم
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <ul className="text-white">
-              <li className="mb-4 mt-4 text-sm">
+              <li className="mb-4 mt-4">
                 <Link href="/" underline="none">
                   صفحه اصلی
                 </Link>
               </li>
-              <li className="mb-4 text-sm">
+              <li className="mb-4">
                 <Link href="/about" underline="none">
                   درباره ما
                 </Link>
               </li>
-              <li className="mb-4 text-sm">
+              <li className="mb-4">
                 <Link href="/automation" underline="none">
                   اتوماسیون اداری
                 </Link>
               </li>
-              <li className="mt-4 text-sm">
+              <li className="mt-4">
                 <Link href="/guidance" underline="none">
                   سامانه راهنمایان آرتمیس
                 </Link>
