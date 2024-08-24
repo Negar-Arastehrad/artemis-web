@@ -22,7 +22,7 @@ const Footer = () => {
       {/* Top Desktop Content */}
       <div className="w-full h-full hidden md:flex flex-col md:flex-row justify-between max-w-[80%] mx-auto items-stretch pt-8 pb-7">
         <div className="flex flex-col justify-center items-center basis-1/3">
-          <Image src={logoImage1} alt="logoImage1" className="w-20" />
+          <Image src={logoImage1} alt="logoImage1" className="w-20 animation-pulse" />
           <p className="text-blue py-3 font-semibold text-center">
             شرکت آرتمیس <br /> کارگزار رسمی تور های خارجی
           </p>
@@ -30,11 +30,11 @@ const Footer = () => {
 
         <ul className="basis-1/3">
           <h6 className="text-white font-semibold mb-4 text-center pb-4 m-auto max-w-[40%] relative">
-            تماس با ما <div className="w-full h-1 bg-blue rounded-sm absolute top-9 left-0 overflow-hidden"><span className="w-6 h-full bg-white rounded-sm absolute top-0 left-2 border-moving"></span></div>
+            تماس با ما <div className="w-full h-1 bg-blue rounded-sm absolute top-9 left-0 overflow-hidden"><span className="w-6 h-full bg-white rounded-sm absolute top-0 left-2 animation-border"></span></div>
           </h6>
           <li className="flex justify-center items-center gap-3 mb-4 mt-4 text-sm">
             <PhoneEnabled className="text-blue" />
-            <p className="text-white">02191008802</p>
+            <p className="text-white">021-91008802</p>
           </li>
           <li className="flex justify-center items-center gap-3 mb-4 text-sm">
             <Email className="text-blue" />
@@ -51,7 +51,7 @@ const Footer = () => {
 
         <ul className="text-center basis-1/3">
           <h6 className="text-white font-semibold mb-4 pb-4 text-center m-auto max-w-[40%] relative">
-            لینک های مهم <div className="w-full h-1 bg-blue rounded-sm absolute top-9 left-0 overflow-hidden"><span className="w-6 h-full bg-white rounded-sm absolute top-0 left-2 border-moving"></span></div>
+            لینک های مهم <div className="w-full h-1 bg-blue rounded-sm absolute top-9 left-0 overflow-hidden"><span className="w-6 h-full bg-white rounded-sm absolute top-0 left-2 animation-border"></span></div>
           </h6>
           <li className="mb-4 text-white mt-4 text-sm">
             <Link href="/">صفحه اصلی</Link>
@@ -102,7 +102,7 @@ const Footer = () => {
             <ul className="text-white">
               <li className="flex gap-3 mb-4 mt-4">
                 <PhoneEnabled className="text-blue" />
-                <Typography>02191008802</Typography>
+                <Typography>021-91008802</Typography>
               </li>
               <li className="flex gap-3 mb-4">
                 <Email className="text-blue" />

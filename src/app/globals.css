@@ -26,17 +26,29 @@
     text-decoration: none;
   }
 
-  .border-moving {
-    animation: moving 2s linear infinite;
+  .animation-border {
+    animation: borderMove 2s linear infinite;
   }
 
-  @keyframes moving {
+  .animation-pulse {
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+
+  @keyframes borderMove {
     0% {
       left: -20px;
     }
     100% {
       left: 100%;
     }
-    
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
   }
 }
