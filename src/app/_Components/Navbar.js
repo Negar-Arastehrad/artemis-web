@@ -1,20 +1,17 @@
 "use client";
 import React, { useState } from "react";
-import logoImg from "../../../public/Images/logo1.png";
-import telImg from "../../../public/Images/Tel.png";
+import logoImg1 from "../../../public/Images/blue-Logo.png";
+import logoImg2 from "../../../public/Images/logo1.png";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import { IoClose } from "react-icons/io5";
-import { Phone } from "@mui/icons-material";
-import Popover from "@mui/material/Popover";
 
 const Navbar = () => {
   const pathname = usePathname(); // for active link style
 
   const [nav, setNav] = useState(false);
-  const [anchorEl, setAnchorEl] = useState(null); // PopUp
 
   const handleNav = () => {
     setNav(!nav);
@@ -29,17 +26,6 @@ const Navbar = () => {
     setNav(false);
     document.body.style.overflow = "scroll";
   };
-
-  const handlePhoneOpen = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-
-  const handlePhoneClose = () => {
-    setAnchorEl(null);
-  };
-
-  const open = Boolean(anchorEl);
-  const id = open ? "simple-popover" : undefined;
 
   return (
     <>
@@ -58,10 +44,77 @@ const Navbar = () => {
       {/* Main Nav */}
       <div className="scroll-m-10 sticky top-0 left-0 right-0 bg-white shadow-custom-blue rounded-full max-w-[80%] sm:max-w-[80%] lg:max-w-[70%] xl:max-w-[60%] mx-auto mt-7 z-[1000]">
         <div className="relative flex items-center justify-between tracking-wider z-50">
-          {/* logo */}
-          <div className="w-16 m-2">
+          {/* Desktop Name logo */}
+          <div className="w-28 mr-5 mb-2 hidden md:block">
             <Link href="/">
-              <Image src={logoImg} alt="Artemist Logo" quality={100} />
+              <Image src={logoImg1} alt="Artemist Logo" quality={100} />
+            </Link>
+          </div>
+
+          {/* Desktop Navigation */}
+          <ul className="hidden md:flex items-center justify-center w-full text-blue font-semibold text-sm text-center rounded-full mr-4">
+            <li className="border-l-2 border-gray px-8">
+              <Link
+                href="/"
+                className={`nav-li ${
+                  pathname === "/" ? "border-b-2 border-red" : ""
+                }`}
+              >
+                صفحه اصلی
+              </Link>
+            </li>
+            <li className="border-l-2 border-gray px-8">
+              <Link
+                href="/about"
+                className={`nav-li ${
+                  pathname === "/about" ? "border-b-2 border-red" : ""
+                }`}
+              >
+                درباره ما
+              </Link>
+            </li>
+            <li className="border-l-2 border-gray px-8">
+              <Link
+                href="/automation"
+                className={`nav-li ${
+                  pathname === "/automation" ? "border-b-2 border-red" : ""
+                }`}
+              >
+                اتوماسیون اداری
+              </Link>
+            </li>
+            <li className="px-8">
+              <Link
+                href="/guidance"
+                className={`nav-li ${
+                  pathname === "/guidance" ? "border-b-2 border-red" : ""
+                }`}
+              >
+                سامانه راهنمایان آرتمیس
+              </Link>
+            </li>
+          </ul>
+
+          {/* Desktop Round logo */}
+          <div className="w-16 m-2 hidden md:block">
+            <Link href="/">
+              <Image src={logoImg2} alt="Artemist Logo" quality={100} />
+            </Link>
+          </div>
+        </div>
+
+        <div className="flex justify-between items-center">
+          {/* Mobile Round logo */}
+          <div className="w-16 m-2 block md:hidden z-50">
+            <Link href="/">
+              <Image src={logoImg2} alt="Artemist Logo" quality={100} />
+            </Link>
+          </div>
+
+          {/* Mobile Name logo */}
+          <div className="w-28 mb-2 block md:hidden z-50">
+            <Link href="/">
+              <Image src={logoImg1} alt="Artemist Logo" quality={100} />
             </Link>
           </div>
 
@@ -72,83 +125,7 @@ const Navbar = () => {
           >
             {nav ? <IoClose size={30} /> : <HiOutlineMenuAlt1 size={30} />}
           </div>
-
-          {/* Desktop Navigation */}
-          <ul className="hidden md:flex items-center justify-center w-full text-blue font-semibold text-sm text-center rounded-full mr-2">
-            <li className="border-l-2 border-gray px-8">
-              <Link
-                href="/"
-                className={`nav-li ${
-                  pathname === "/" ? "border-b-2 border-blue" : ""
-                }`}
-              >
-                صفحه اصلی
-              </Link>
-            </li>
-            <li className="border-l-2 border-gray px-8">
-              <Link
-                href="/about"
-                className={`nav-li ${
-                  pathname === "/about" ? "border-b-2 border-blue" : ""
-                }`}
-              >
-                درباره ما
-              </Link>
-            </li>
-            <li className="border-l-2 border-gray px-8">
-              <Link
-                href="/automation"
-                className={`nav-li ${
-                  pathname === "/automation" ? "border-b-2 border-blue" : ""
-                }`}
-              >
-                اتوماسیون اداری
-              </Link>
-            </li>
-            <li className=" px-8">
-              <Link
-                href="/guidance"
-                className={`nav-li ${
-                  pathname === "/guidance" ? "border-b-2 border-blue" : ""
-                }`}
-              >
-                سامانه راهنمایان آرتمیس
-              </Link>
-            </li>
-          </ul>
-          <div
-            className="text-white bg-blue hover:text-blue hover:bg-white transition duration-300 hover:scale-110 hover:-rotate-[30deg] rounded-full w-14 h-12 hidden md:flex justify-center items-center cursor-pointer m-2"
-            onClick={handlePhoneOpen}
-          >
-            <Phone />
-          </div>
         </div>
-
-        {/* Popover for both desktop and mobile */}
-        <Popover
-          id={id}
-          open={open}
-          anchorEl={anchorEl}
-          onClose={handlePhoneClose}
-          anchorOrigin={{
-            vertical: "bottom", // Opens below the icon
-            horizontal: "center", // Centered relative to the icon
-          }}
-          transformOrigin={{
-            vertical: "top", // Aligns the top of the popover with the bottom of the icon
-            horizontal: "center", // Horizontally centered
-          }}
-          sx={{
-            "& .MuiPaper-root": {
-              borderRadius: ".5rem",
-              marginTop:"-.6rem"
-            }
-          }}
-        >
-          <Link href="tel:02191008802">
-            <Image src={telImg} alt="tel" className="w-40" />
-          </Link>
-        </Popover>
 
         {/* Mobile Navigation */}
         <ul
@@ -204,12 +181,6 @@ const Navbar = () => {
             >
               سامانه راهنمایان آرتمیس
             </Link>
-          </li>
-          <li
-            className="text-white bg-blue hover:text-blue hover:bg-white rounded-full w-14 h-14 md:hidden flex justify-center items-center cursor-pointer mr-[1.5rem] mt-2 transition duration-300 hover:scale-110 hover:-rotate-[30deg]"
-            onClick={handlePhoneOpen}
-          >
-            <Phone />
           </li>
         </ul>
       </div>

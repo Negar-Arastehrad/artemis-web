@@ -7,7 +7,8 @@ const theme = createTheme({
     gray: "#d9d9d9",
     black: "#000000",
     hoverBlue: "#0055ab",
-    glass: "rgba(255, 255, 255, 0.4)"
+    glass: "rgba(255, 255, 255, 0.4)",
+    red: "#FF6666"
   },
   typography: {
     fontFamily: 'var(--font-kalameh)',  
