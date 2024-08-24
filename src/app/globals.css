@@ -19,10 +19,24 @@
   }
 
   .nav-li {
-    @apply relative inline-block before:content-[''] before:absolute before:left-0 before:bottom-[-3px] before:w-full before:h-[3px] before:bg-red before:transform before:scale-x-0 before:origin-right before:rounded-md before:transition-transform before:duration-500 hover:before:scale-x-100 hover:before:origin-left p-2;
+    @apply relative inline-block before:content-[''] before:absolute before:left-0 before:bottom-[-3px] before:w-full before:h-[3px] before:bg-blue before:transform before:scale-x-0 before:origin-right before:rounded-md before:transition-transform before:duration-500 hover:before:scale-x-100 hover:before:origin-left p-2;
   }
 
   a {
     text-decoration: none;
+  }
+
+  .border-moving {
+    animation: moving 2s linear infinite;
+  }
+
+  @keyframes moving {
+    0% {
+      left: -20px;
+    }
+    100% {
+      left: 100%;
+    }
+    
   }
 }

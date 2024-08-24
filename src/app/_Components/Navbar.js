@@ -57,7 +57,7 @@ const Navbar = () => {
               <Link
                 href="/"
                 className={`nav-li ${
-                  pathname === "/" ? "border-b-2 border-red" : ""
+                  pathname === "/" ? "border-b-2 border-blue" : ""
                 }`}
               >
                 صفحه اصلی
@@ -67,7 +67,7 @@ const Navbar = () => {
               <Link
                 href="/about"
                 className={`nav-li ${
-                  pathname === "/about" ? "border-b-2 border-red" : ""
+                  pathname === "/about" ? "border-b-2 border-blue" : ""
                 }`}
               >
                 درباره ما
@@ -77,7 +77,7 @@ const Navbar = () => {
               <Link
                 href="/automation"
                 className={`nav-li ${
-                  pathname === "/automation" ? "border-b-2 border-red" : ""
+                  pathname === "/automation" ? "border-b-2 border-blue" : ""
                 }`}
               >
                 اتوماسیون اداری
@@ -87,7 +87,7 @@ const Navbar = () => {
               <Link
                 href="/guidance"
                 className={`nav-li ${
-                  pathname === "/guidance" ? "border-b-2 border-red" : ""
+                  pathname === "/guidance" ? "border-b-2 border-blue" : ""
                 }`}
               >
                 سامانه راهنمایان آرتمیس
@@ -105,14 +105,14 @@ const Navbar = () => {
 
         <div className="flex justify-between items-center">
           {/* Mobile Round logo */}
-          <div className="w-16 m-2 block md:hidden z-50">
+          <div className="w-14 m-1 block md:hidden z-50">
             <Link href="/">
               <Image src={logoImg2} alt="Artemist Logo" quality={100} />
             </Link>
           </div>
 
           {/* Mobile Name logo */}
-          <div className="w-28 mb-2 block md:hidden z-50">
+          <div className="w-24 mb-2 block md:hidden z-50">
             <Link href="/">
               <Image src={logoImg1} alt="Artemist Logo" quality={100} />
             </Link>
@@ -121,7 +121,7 @@ const Navbar = () => {
           {/* Hamburger */}
           <div
             onClick={handleNav}
-            className="md:hidden text-blue hover:text-white border-2 border-blue hover:bg-blue ml-2 rounded-full w-14 h-14 flex justify-center items-center cursor-pointer z-50 transition duration-300"
+            className="md:hidden text-blue hover:text-white border-2 border-blue hover:bg-blue ml-1 rounded-full w-[3.1rem] h-[3.1rem] flex justify-center items-center cursor-pointer z-50 transition duration-300"
           >
             {nav ? <IoClose size={30} /> : <HiOutlineMenuAlt1 size={30} />}
           </div>
