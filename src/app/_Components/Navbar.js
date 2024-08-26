@@ -1,7 +1,8 @@
 "use client";
 import React, { useState } from "react";
-import logoImg1 from "../../../public/Images/blue-Logo.png";
-import logoImg2 from "../../../public/Images/logo1.png";
+import logoImg1 from "../../../public/Images/logo1.png";
+import logoImg2 from "../../../public/Images/blue-Logo.png";
+import curvedLogo from "../../../public/Images/curvedLogo.png";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -42,82 +43,62 @@ const Navbar = () => {
       )}
 
       {/* Main Nav */}
-      <div className="scroll-m-10 sticky top-0 left-0 right-0 bg-white shadow-custom-blue rounded-full max-w-[80%] sm:max-w-[80%] lg:max-w-[70%] xl:max-w-[62%] mx-auto mt-7 z-[1000]">
+      <div className="scroll-m-10 sticky top-0 left-0 right-0 bg-white shadow-custom-blue rounded-full max-w-[80%] sm:max-w-[80%] lg:max-w-[70%] xl:max-w-[60%] mx-auto mt-7 z-[1000]">
         <div className="relative flex items-center justify-between tracking-wider z-50">
           {/* Desktop Name logo */}
-          <div className="w-28 mr-5 mb-2 hidden md:block">
+          <div className="w-28 mb-2 hidden md:block ml-[2.4rem] z-50">
             <Link href="/">
-              <Image src={logoImg1} alt="Artemist Logo" quality={100} />
+              <Image src={logoImg2} alt="Artemist Logo" quality={100} />
             </Link>
           </div>
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex items-center justify-center w-full text-blue font-semibold text-sm text-center rounded-full mr-4">
-            <li className="border-l-2 border-gray px-8">
+          <ul className="hidden md:flex items-center justify-center w-full text-blue text-center rounded-full font-bold text-lg">
+            <li className="border-r-2 border-gray pr-2 lg:pr-8">
               <Link
                 href="/"
                 className={`nav-li ${
                   pathname === "/" ? "border-b-2 border-blue" : ""
                 }`}
               >
-                صفحه اصلی
+                Home
               </Link>
             </li>
-            <li className="border-l-2 border-gray px-8">
+            <li className="border-r-2 border-gray px-2 lg:px-8">
               <Link
                 href="/about"
                 className={`nav-li ${
                   pathname === "/about" ? "border-b-2 border-blue" : ""
                 }`}
               >
-                درباره ما
+                About Us
               </Link>
             </li>
-            <li className="border-l-2 border-gray px-8">
+            <li className="border-r-2 border-gray px-2 lg:px-8">
               <Link
                 href="/automation"
                 className={`nav-li ${
                   pathname === "/automation" ? "border-b-2 border-blue" : ""
                 }`}
               >
-                اتوماسیون اداری
+                Office Automation
               </Link>
             </li>
-            <li className="px-8">
+            <li className="pl-2 lg:pl-8">
               <Link
                 href="/guidance"
                 className={`nav-li ${
                   pathname === "/guidance" ? "border-b-2 border-blue" : ""
                 }`}
               >
-                سامانه راهنمایان آرتمیس
+                Artemis Guides System
               </Link>
             </li>
           </ul>
-
-          {/* Desktop Round logo */}
-          <div className="w-16 m-2 hidden md:block">
-            <Link href="/">
-              <Image src={logoImg2} alt="Artemist Logo" quality={100} />
-            </Link>
-          </div>
         </div>
 
+        {/* Mobile Features */}
         <div className="flex justify-between items-center">
-          {/* Mobile Round logo */}
-          <div className="w-14 m-1 block md:hidden z-50">
-            <Link href="/">
-              <Image src={logoImg2} alt="Artemist Logo" quality={100} />
-            </Link>
-          </div>
-
-          {/* Mobile Name logo */}
-          <div className="w-24 mb-2 block md:hidden z-50">
-            <Link href="/">
-              <Image src={logoImg1} alt="Artemist Logo" quality={100} />
-            </Link>
-          </div>
-
           {/* Hamburger */}
           <div
             onClick={handleNav}
@@ -125,17 +106,31 @@ const Navbar = () => {
           >
             {nav ? <IoClose size={30} /> : <HiOutlineMenuAlt1 size={30} />}
           </div>
+
+          {/* Mobile Name logo */}
+          <div className="w-24 mb-2 block md:hidden z-50">
+            <Link href="/">
+              <Image src={logoImg2} alt="Artemist Logo" quality={100} />
+            </Link>
+          </div>
+
+          {/* Mobile Round logo */}
+          <div className="w-14 m-1 block md:hidden z-50">
+            <Link href="/">
+              <Image src={logoImg1} alt="Artemist Logo" quality={100} />
+            </Link>
+          </div>
         </div>
 
         {/* Mobile Navigation */}
         <ul
           className={`${
             nav ? "block" : "hidden"
-          } absolute top-[50%] left-0 w-full bg-white rounded-b-3xl text-blue font-semibold text-sm py-4 z-10 md:hidden`}
+          } absolute top-[50%] left-0 w-full bg-white rounded-b-3xl text-blue font-bold py-4 z-10 text-lg lg:hidden`}
         >
           <li
             onClick={closeNav}
-            className="border-b-2 border-gray pb-4 pt-8 w-[90%] m-auto"
+            className="border-b-2 border-gray pb-5 pt-8 w-[90%] m-auto"
           >
             <Link
               href="/"
@@ -143,12 +138,12 @@ const Navbar = () => {
                 pathname === "/" ? "border-b-2 border-blue" : ""
               }`}
             >
-              صفحه اصلی
+              Home
             </Link>
           </li>
           <li
             onClick={closeNav}
-            className="border-b-2 border-gray py-4 w-[90%] m-auto"
+            className="border-b-2 border-gray py-5 w-[90%] m-auto"
           >
             <Link
               href="/about"
@@ -156,12 +151,12 @@ const Navbar = () => {
                 pathname === "/about" ? "border-b-2 border-blue" : ""
               }`}
             >
-              درباره ما
+              About Us
             </Link>
           </li>
           <li
             onClick={closeNav}
-            className="border-b-2 border-gray py-4 w-[90%] m-auto"
+            className="border-b-2 border-gray py-5 w-[90%] m-auto"
           >
             <Link
               href="/automation"
@@ -169,17 +164,17 @@ const Navbar = () => {
                 pathname === "/automation" ? "border-b-2 border-blue" : ""
               }`}
             >
-              اتوماسیون اداری
+              Office Automation
             </Link>
           </li>
-          <li onClick={closeNav} className="py-4 w-[90%] m-auto">
+          <li onClick={closeNav} className="py-5 w-[90%] m-auto">
             <Link
               href="/guidance"
               className={`nav-li ${
                 pathname === "/guidance" ? "border-b-2 border-blue" : ""
               }`}
             >
-              سامانه راهنمایان آرتمیس
+              Artemis Guides System
             </Link>
           </li>
         </ul>

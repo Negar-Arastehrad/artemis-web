@@ -14,6 +14,32 @@ const figtree = Figtree({
   variable: "--font-figtree",
 });
 
+export const champagneLimousines = localFont({
+  src: [
+    {
+      path: "../../public/fonts/ttf/Champagne-Limousines-Bold-Italic.ttf",
+      weight: "700",
+      style: "italic",
+    },
+    {
+      path: "../../public/fonts/ttf/Champagne-Limousines-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/ttf/Champagne-Limousines-Italic.ttf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../../public/fonts/ttf/Champagne-Limousines.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-champagne-limousines",
+});
+
 export const kalameh = localFont({
   src: [
     // Regular Kalameh fonts
@@ -167,14 +193,12 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html dir="rtl" className={`dark ${figtree.variable} ${kalameh.variable}`}>
+    <html className={`dark ${figtree.variable} ${champagneLimousines.variable}`}>
       <body>
       <ThemeProvider theme={theme}>
-        <RTL>
           <Navbar />
           <main>{children}</main>
           <Footer />
-        </RTL>
         </ThemeProvider>
       </body>
     </html>
