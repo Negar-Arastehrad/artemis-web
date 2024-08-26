@@ -67,21 +67,20 @@ const MainForm = () => {
 
   return (
     <div className="w-full h-full tracking-wider flex justify-center items-center">
-     <Box
-  component="form"
-  noValidate
-  maxWidth="100%" // Set this to ensure it takes the full width
-  onSubmit={handleSubmit(onSubmit)}
-  className="m-auto rounded-xl py-8 px-8 bg-glass"
-  sx={{ maxWidth: "500px", width: "100%" }} // Or set a specific max width
->
+      <Box
+        component="form"
+        noValidate
+        onSubmit={handleSubmit(onSubmit)}
+        className="m-auto rounded-xl py-8 px-8 bg-glass"
+        sx={{ maxWidth: "550px", width: "100%" }}
+      >
         <Typography
           variant="h4"
           sx={{
             color: "blue",
             fontWeight: "bold",
             textAlign: "center",
-            marginBottom: "3rem",
+            marginBottom: "1.5rem",
           }}
         >
           Welcome!
@@ -103,7 +102,7 @@ const MainForm = () => {
           }
           sx={TextFieldStyle}
           InputLabelProps={{
-            sx: { fontSize: "1rem", fontWeight: "bold" }, // Bold and bigger label
+            sx: { fontSize: "1rem", fontWeight: "bold" },
           }}
         />
         <TextField
@@ -136,12 +135,12 @@ const MainForm = () => {
           }}
           sx={TextFieldStyle}
           InputLabelProps={{
-            sx: { fontSize: "1rem", fontWeight: "bold" }, // Bold and bigger label
+            sx: { fontSize: "1rem", fontWeight: "bold" },
           }}
         />
 
         {/* Others */}
-        <div className="flex flex-col items-start lg:flex-row lg:items-center justify-between mt-3">
+        <div className="flex flex-col items-start lg:flex-row lg:items-center justify-between mt-1">
           <FormGroup sx={{ marginLeft: "-.8rem" }}>
             <FormControlLabel
               labelPlacement="start"
@@ -175,18 +174,17 @@ const MainForm = () => {
     hsla(210, 100%, 30%, 1) 100%
   );`,
             color: "white",
-            paddingY: ".8rem", // Increased padding for larger button size
+            paddingY: ".7rem",
             borderRadius: ".75rem",
             marginY: "2rem",
-            textTransform: "none",
-            fontSize: "1.3rem", // Larger font size
+            fontSize: "1.1rem",
             fontWeight: "bold",
           }}
         >
           Log in
         </Button>
 
-        <Box display="flex" alignItems="center" my={1}>
+        <Box display="flex" alignItems="center">
           <Divider sx={{ flexGrow: 1 }} />
           <Typography
             variant="body1"
@@ -198,40 +196,55 @@ const MainForm = () => {
         </Box>
 
         {/* Btns */}
-        <div className="flex items-center justify-between w-full mt-[2rem]">
+        <div className="flex flex-col md:flex-row gap-3 items-center justify-between w-full mt-[2rem]">
           <Button
             component="a"
             href="/counter-registration"
             sx={{
               borderColor: "blue",
               color: "blue",
-              padding: ".8rem",
+              paddingY: ".8rem",
+              paddingX: "1.2rem",
               borderRadius: ".75rem",
               textTransform: "none",
-              fontSize: "1.1rem", // Increased font size for buttons
+              fontSize: "1.1rem",
               fontWeight: "bold",
+              transition: "all 0.5s ease",
+              "&:hover": {
+                backgroundColor: "blue",
+                color: "white",
+                borderColor: "blue",
+              },
             }}
             variant="outlined"
             startIcon={<Person />}
           >
-            Counter Reg
+            Counter Registration
           </Button>
+
           <Button
             component="a"
             href="/agency-registration"
             sx={{
               borderColor: "blue",
               color: "blue",
-              padding: ".8rem",
+              paddingY: ".8rem",
+              paddingX: "1.2rem",
               borderRadius: ".75rem",
               textTransform: "none",
-              fontSize: "1.1rem", // Increased font size for buttons
+              fontSize: "1.1rem",
               fontWeight: "bold",
+              transition: "all 0.5s ease",
+              "&:hover": {
+                backgroundColor: "blue",
+                color: "white",
+                borderColor: "blue",
+              },
             }}
             variant="outlined"
             startIcon={<PeopleAlt />}
           >
-            Agency Reg
+            Agency Registration
           </Button>
         </div>
       </Box>
