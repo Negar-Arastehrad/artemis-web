@@ -8,6 +8,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         "back-pattern": "url('/Images/backgrounds/2.png')",
+        'clouds': "url('/Images/cloudPlane.jpg')",
       },
       colors: {
         blue: "#004080",
