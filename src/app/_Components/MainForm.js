@@ -209,7 +209,7 @@ const MainForm = () => {
               textTransform: "none",
               fontSize: "1.1rem",
               fontWeight: "bold",
-              transition: "all 0.5s ease",
+              transition: "all 0.4s ease",
               "&:hover": {
                 backgroundColor: "blue",
                 color: "white",
@@ -234,7 +234,7 @@ const MainForm = () => {
               textTransform: "none",
               fontSize: "1.1rem",
               fontWeight: "bold",
-              transition: "all 0.5s ease",
+              transition: "all 0.4s ease",
               "&:hover": {
                 backgroundColor: "blue",
                 color: "white",

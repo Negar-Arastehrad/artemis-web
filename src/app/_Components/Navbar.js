@@ -61,7 +61,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <ul className="hidden md:flex items-center justify-center w-full text-blue text-center rounded-full font-bold text-lg">
-            <li className="border-r-2 border-gray pr-2 lg:pr-8">
+            <li className="border-r-2 border-gray pr-2 xl:pr-8">
               <Link
                 href="/"
                 className={`nav-li ${
@@ -71,7 +71,7 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-            <li className="border-r-2 border-gray px-2 lg:px-8">
+            <li className="border-r-2 border-gray px-2 xl:px-8">
               <Link
                 href="/about"
                 className={`nav-li ${
@@ -81,7 +81,7 @@ const Navbar = () => {
                 About Us
               </Link>
             </li>
-            <li className="border-r-2 border-gray px-2 lg:px-8">
+            <li className="border-r-2 border-gray px-2 xl:px-8">
               <Link
                 href="/automation"
                 className={`nav-li ${
@@ -91,7 +91,7 @@ const Navbar = () => {
                 Office Automation
               </Link>
             </li>
-            <li className="pl-2 lg:pl-8">
+            <li className="pl-2 xl:pl-8">
               <Link
                 href="/guidance"
                 className={`nav-li ${

@@ -113,10 +113,10 @@ const Footer = () => {
             aria-controls="panel2a-content"
             id="panel2a-header"
             sx={{ borderBottom: "2px solid white", padding: "0", margin: "0" }}
+            
           >
             <Typography
-              className="text-center text-white"
-              sx={{ fontWeight: "600" }}
+              className="text-center text-white font-bold"
             >
               Contact Us
             </Typography>
@@ -125,19 +125,19 @@ const Footer = () => {
             <ul className="text-blue">
               <li className="flex gap-3 mb-4 mt-4">
                 <PhoneEnabled className="text-white" />
-                <Typography sx={{ fontWeight: "600", fontSize: ".9rem" }}>
+                <Typography sx={{ fontWeight: "600", fontSize: "1rem" }}>
                   021-91008802
                 </Typography>
               </li>
               <li className="flex gap-3 mb-4">
                 <Email className="text-white" />
-                <Typography sx={{ fontWeight: "600", fontSize: ".9rem" }}>
+                <Typography sx={{ fontWeight: "600", fontSize: "1rem" }}>
                   info@artemist.com
                 </Typography>
               </li>
               <li className="flex mt-4">
                 <Place className="text-white mr-3" />
-                <Typography sx={{ fontWeight: "600", fontSize: ".9rem" }}>
+                <Typography sx={{ fontWeight: "600", fontSize: "1rem" }}>
                   Karaj, Haft-e-Tir Square, Beginning of Belal Blvd, Naderi
                   Alley, Kristal Building, Unit 2, 2nd Floor
                 </Typography>
@@ -172,22 +172,22 @@ const Footer = () => {
           </AccordionSummary>
           <AccordionDetails>
             <ul className="text-blue">
-              <li className="mb-4 mt-4 font-bold text-sm">
+              <li className="mb-4 mt-4 font-bold">
                 <Link href="/" underline="none">
                   Home
                 </Link>
               </li>
-              <li className="mb-4 font-bold text-sm">
+              <li className="mb-4 font-bold">
                 <Link href="/about" underline="none">
                   About Us
                 </Link>
               </li>
-              <li className="mb-4 font-bold text-sm">
+              <li className="mb-4 font-bold">
                 <Link href="/automation" underline="none">
                   Office Automation
                 </Link>
               </li>
-              <li className="mt-4 font-bold text-sm">
+              <li className="mt-4 font-bold">
                 <Link href="/guidance" underline="none">
                   Artemis Guidance System
                 </Link>
