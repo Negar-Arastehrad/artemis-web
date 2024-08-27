@@ -43,8 +43,15 @@ const Navbar = () => {
       )}
 
       {/* Main Nav */}
-      <div className="scroll-m-10 sticky top-0 left-0 right-0 bg-white shadow-custom-blue rounded-full max-w-[80%] sm:max-w-[80%] lg:max-w-[70%] xl:max-w-[60%] mx-auto mt-7 z-[1000]">
-        <div className="relative flex items-center justify-between tracking-wider z-50">
+      <div className="scroll-m-10 sticky top-0 left-0 right-0 bg-white rounded-full max-w-[80%] sm:max-w-[80%] lg:max-w-[75%] xl:max-w-[60%] mx-auto mt-7 z-[1000] ">
+
+        {/* Dektop */}
+        <div className="relative flex items-center justify-between tracking-wide z-50 ">
+          {/* Desktop Round logo */}
+          <div className="w-[6.8rem] lg:w-[7.1rem] hidden md:block absolute -top-[1.8rem] lg:-top-[1.9rem] -left-14">
+            <Image src={curvedLogo} alt="Artemist Logo" quality={100} />
+          </div>
+
           {/* Desktop Name logo */}
           <div className="w-28 mb-2 hidden md:block ml-[2.4rem] z-50">
             <Link href="/">
@@ -182,5 +189,3 @@ const Navbar = () => {
     </>
   );
 };
-
-export default Navbar;
