@@ -17,30 +17,16 @@ const figtree = Figtree({
 export const champagneLimousines = localFont({
   src: [
     {
-      path: "../../public/fonts/ttf/champagne-limousines-bold-italic.ttf",
-      weight: "700",
-      style: "italic",
-    },
-    {
       path: "../../public/fonts/ttf/champagne-limousines-bold.ttf",
       weight: "700",
-      style: "normal",
-    },
-    {
-      path: "../../public/fonts/ttf/champagne-limousines-italic.ttf",
-      weight: "400",
-      style: "italic",
-    },
-    {
-      path: "../../public/fonts/ttf/champagne-limousines.ttf",
-      weight: "400",
       style: "normal",
     },
   ],
   variable: "--font-champagne-limousines",
 });
 
-export const kalameh = localFont({
+{/*
+  export const kalameh = localFont({
   src: [
     // Regular Kalameh fonts
     {
@@ -185,6 +171,8 @@ export const kalameh = localFont({
   ],
   variable: "--font-kalameh",
 });
+  */}
+
 
 export const metadata = {
   title: "Artemist",
