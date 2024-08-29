@@ -16,11 +16,6 @@ const figtree = Figtree({
 export const champagneLimousines = localFont({
   src: [
     {
-      path: "../../public/fonts/ttf/champagne-limousines-bold-italic.ttf",
-      weight: "700",
-      style: "italic",
-    },
-    {
       path: "../../public/fonts/ttf/champagne-limousines-bold.ttf",
       weight: "700",
       style: "normal",
@@ -42,11 +37,6 @@ export const champagneLimousines = localFont({
 export const kalameh = localFont({
   src: [
     // Regular Kalameh fonts
-    {
-      path: "../../public/fonts/woff2/kalamehweb-thin.woff2",
-      weight: "100",
-      style: "normal",
-    },
     {
       path: "../../public/fonts/woff2/kalamehweb-extralight.woff2",
       weight: "200",
