@@ -7,19 +7,19 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        "back-pattern": "url('/Images/backgrounds/2.png')",
-        'clouds': "url('/Images/cloudPlane.jpg')",
+        "back-photo": "url('/Images/backgrounds/1.jpg')",
       },
       colors: {
         blue: "#004080",
         gray: "#d9d9d9",
         black: "#000000",
-        glass: "rgba(255, 255, 255, 0.6)",
+        glass: "rgba(255, 255, 255, 0.7)",
         darkGlass: "rgba(255, 255, 255, 0.8)",
-        Lightred: "#FF6666"
+        Lightred: "#FF6666",
       },
       boxShadow: {
-        'custom-blue': '0px -2px 10px rgba(0, 64, 128, 0.1), 0px 6px 20px rgba(0, 64, 128, 0.4)',
+        "custom-blue":
+          "0px -2px 10px rgba(0, 64, 128, 0.1), 0px 6px 20px rgba(0, 64, 128, 0.4)",
       },
     },
   },

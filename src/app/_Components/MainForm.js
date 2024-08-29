@@ -71,7 +71,7 @@ const MainForm = () => {
         component="form"
         noValidate
         onSubmit={handleSubmit(onSubmit)}
-        className="m-auto rounded-xl py-8 px-8 bg-glass"
+        className="m-auto rounded-xl px-8 py-6 bg-glass"
         sx={{ maxWidth: "550px", width: "100%" }}
       >
         <Typography
@@ -80,7 +80,6 @@ const MainForm = () => {
             color: "blue",
             fontWeight: "bold",
             textAlign: "center",
-            marginBottom: "1.5rem",
           }}
         >
           Welcome!
@@ -100,11 +99,12 @@ const MainForm = () => {
               {errors.email?.message}
             </Typography>
           }
-          sx={TextFieldStyle}
+          sx={{ ...TextFieldStyle, mb: 1 }} // Adjust the margin-bottom
           InputLabelProps={{
             sx: { fontSize: "1rem", fontWeight: "bold" },
           }}
         />
+
         <TextField
           variant="outlined"
           required
@@ -133,7 +133,7 @@ const MainForm = () => {
               </InputAdornment>
             ),
           }}
-          sx={TextFieldStyle}
+          sx={{ ...TextFieldStyle, mt: 1 }} // Adjust the margin-top if needed
           InputLabelProps={{
             sx: { fontSize: "1rem", fontWeight: "bold" },
           }}
@@ -156,7 +156,12 @@ const MainForm = () => {
             href="/"
             variant="body2"
             underline="hover"
-            sx={{ color: "blue", fontWeight: "bold", fontSize: "1rem" }}
+            sx={{
+              color: "blue",
+              fontWeight: "bold",
+              fontSize: "1rem",
+              marginLeft: ".2rem",
+            }}
           >
             Forgot Your Password?
           </Link>
@@ -168,11 +173,7 @@ const MainForm = () => {
           fullWidth
           variant="contained"
           sx={{
-            background: `linear-gradient(
-    90deg,
-    hsla(0, 100%, 64%, 1) 0%,
-    hsla(210, 100%, 30%, 1) 100%
-  );`,
+            background: `linear-gradient(90deg, hsla(15, 100%, 75%, 1) 0%, hsla(210, 100%, 25%, 1) 100%);`,
             color: "white",
             paddingY: ".7rem",
             borderRadius: ".75rem",
@@ -185,25 +186,26 @@ const MainForm = () => {
         </Button>
 
         <Box display="flex" alignItems="center">
-          <Divider sx={{ flexGrow: 1 }} />
+          <Divider sx={{ flexGrow: 1 }} className="bg-slate-600" />
           <Typography
             variant="body1"
-            sx={{ mx: 2, color: "grey", fontSize: "1rem", fontWeight: "bold" }}
+            sx={{ mx: 2, fontSize: "1rem", fontWeight: "bold" }}
+            className="text-slate-600"
           >
             Don&apos;t have an account?
           </Typography>
-          <Divider sx={{ flexGrow: 1 }} />
+          <Divider sx={{ flexGrow: 1 }} className="bg-slate-600" />
         </Box>
 
         {/* Btns */}
-        <div className="flex flex-col md:flex-row gap-3 items-center justify-between w-full mt-[2rem]">
+        <div className="flex flex-col md:flex-row gap-3 items-center justify-between w-full mt-[1.5rem]">
           <Button
             component="a"
             href="/counter-registration"
             sx={{
               borderColor: "blue",
               color: "blue",
-              paddingY: ".8rem",
+              paddingY: ".6rem",
               paddingX: "1.2rem",
               borderRadius: ".75rem",
               textTransform: "none",
@@ -211,9 +213,9 @@ const MainForm = () => {
               fontWeight: "bold",
               transition: "all 0.4s ease",
               "&:hover": {
-                backgroundColor: "blue",
+                background: `linear-gradient(90deg, hsla(15, 100%, 75%, 1) 0%, hsla(210, 100%, 25%, 1) 100%);`,
                 color: "white",
-                borderColor: "blue",
+                border: "none",
               },
             }}
             variant="outlined"
@@ -228,7 +230,7 @@ const MainForm = () => {
             sx={{
               borderColor: "blue",
               color: "blue",
-              paddingY: ".8rem",
+              paddingY: ".6rem",
               paddingX: "1.2rem",
               borderRadius: ".75rem",
               textTransform: "none",
@@ -236,9 +238,9 @@ const MainForm = () => {
               fontWeight: "bold",
               transition: "all 0.4s ease",
               "&:hover": {
-                backgroundColor: "blue",
+                background: `linear-gradient(90deg, hsla(15, 100%, 75%, 1) 0%, hsla(210, 100%, 25%, 1) 100%);`,
                 color: "white",
-                borderColor: "blue",
+                border: "none",
               },
             }}
             variant="outlined"

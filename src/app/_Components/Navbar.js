@@ -44,7 +44,6 @@ const Navbar = () => {
 
       {/* Main Nav */}
       <div className="scroll-m-10 sticky top-0 left-0 right-0 bg-white rounded-full max-w-[80%] sm:max-w-[80%] lg:max-w-[75%] xl:max-w-[60%] mx-auto mt-7 z-[1000] ">
-
         {/* Dektop */}
         <div className="relative flex items-center justify-between tracking-wide z-50 ">
           {/* Desktop Round logo */}
@@ -61,7 +60,7 @@ const Navbar = () => {
 
           {/* Desktop Navigation */}
           <ul className="hidden md:flex items-center justify-center w-full text-blue text-center rounded-full font-bold text-lg">
-            <li className="border-r-2 border-gray pr-2 xl:pr-8">
+            <li className="border-r-2 border-gray pr-2 xl:pr-7">
               <Link
                 href="/"
                 className={`nav-li ${
@@ -71,34 +70,44 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-            <li className="border-r-2 border-gray px-2 xl:px-8">
+            <li className="border-r-2 border-gray px-2 xl:px-7">
               <Link
                 href="/about"
                 className={`nav-li ${
-                  pathname === "/about" ? "border-b-2 border-blue" : ""
+                  pathname === "/tours" ? "border-b-2 border-blue" : ""
                 }`}
               >
-                About Us
+                Our Best Tours
               </Link>
             </li>
-            <li className="border-r-2 border-gray px-2 xl:px-8">
+            <li className="border-r-2 border-gray px-2 xl:px-7">
+              <Link
+                href="/about"
+                className={`nav-li ${
+                  pathname === "/offers" ? "border-b-2 border-blue" : ""
+                }`}
+              >
+                Special Offers
+              </Link>
+            </li>
+            <li className="border-r-2 border-gray px-2 xl:px-7">
               <Link
                 href="/automation"
                 className={`nav-li ${
-                  pathname === "/automation" ? "border-b-2 border-blue" : ""
+                  pathname === "/flights" ? "border-b-2 border-blue" : ""
                 }`}
               >
-                Office Automation
+                Flights
               </Link>
             </li>
-            <li className="pl-2 xl:pl-8">
+            <li className="pl-2 xl:pl-7">
               <Link
                 href="/guidance"
                 className={`nav-li ${
-                  pathname === "/guidance" ? "border-b-2 border-blue" : ""
+                  pathname === "/hotels" ? "border-b-2 border-blue" : ""
                 }`}
               >
-                Artemis Guides System
+                Hotels
               </Link>
             </li>
           </ul>
@@ -153,12 +162,22 @@ const Navbar = () => {
             className="border-b-2 border-gray py-5 w-[90%] m-auto"
           >
             <Link
-              href="/about"
+              href="/tours"
               className={`nav-li ${
-                pathname === "/about" ? "border-b-2 border-blue" : ""
+                pathname === "/tours" ? "border-b-2 border-blue" : ""
               }`}
             >
-              About Us
+              Our Best Tours
+            </Link>
+          </li>
+          <li className="border-b-2 border-gray py-5 w-[90%] m-auto">
+            <Link
+              href="/offers"
+              className={`nav-li ${
+                pathname === "/offers" ? "border-b-2 border-blue" : ""
+              }`}
+            >
+              Special Offers
             </Link>
           </li>
           <li
@@ -166,22 +185,22 @@ const Navbar = () => {
             className="border-b-2 border-gray py-5 w-[90%] m-auto"
           >
             <Link
-              href="/automation"
+              href="/flights"
               className={`nav-li ${
-                pathname === "/automation" ? "border-b-2 border-blue" : ""
+                pathname === "/flights" ? "border-b-2 border-blue" : ""
               }`}
             >
-              Office Automation
+              Flights
             </Link>
           </li>
           <li onClick={closeNav} className="py-5 w-[90%] m-auto">
             <Link
-              href="/guidance"
+              href="/hotels"
               className={`nav-li ${
-                pathname === "/guidance" ? "border-b-2 border-blue" : ""
+                pathname === "/hotels" ? "border-b-2 border-blue" : ""
               }`}
             >
-              Artemis Guides System
+              Hotels
             </Link>
           </li>
         </ul>

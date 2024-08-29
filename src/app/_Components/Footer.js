@@ -46,17 +46,16 @@ const Footer = () => {
           </h6>
           <li className="flex justify-center items-center gap-3 mb-4 mt-4 text-sm font-semibold">
             <PhoneEnabled className="text-blue" />
-            <p className="text-white">021-91008802</p>
+            <p className="text-white">021-9100****</p>
           </li>
           <li className="flex justify-center items-center gap-3 mb-4 text-sm font-semibold">
             <Email className="text-blue" />
-            <p className="text-white">info@artemist.com</p>
+            <p className="text-white">info@company.com</p>
           </li>
           <li className="flex justify-center items-center mt-4 mx-5 text-sm font-semibold">
-            <Place className="text-blue" />
+            <Place className="text-blue mb-2" />
             <p className="text-white text-center max-w-[80%]">
-              Karaj, Haft-e-Tir Square, Beginning of Belal Blvd, Naderi Alley,
-              Kristal Building, Unit 2, 2nd Floor
+              Karaj, Haft-e-Tir Square, Beginning of Second Blvd, 5th Alley
             </p>
           </li>
         </ul>
@@ -68,17 +67,17 @@ const Footer = () => {
               <span className="w-6 h-full bg-white rounded-sm absolute top-0 left-2 animation-border"></span>
             </div>
           </h6>
-          <li className="mb-4 text-white mt-4 text-sm font-semibold">
-            <Link href="/">Home</Link>
+          <li className="mb-4 text-white text-sm font-semibold">
+            <Link href="/tours">Our Best Tours</Link>
           </li>
           <li className="mb-4 text-white text-sm font-semibold">
-            <Link href="/about">About Us</Link>
-          </li>
-          <li className="mb-4 text-white text-sm font-semibold">
-            <Link href="/automation">Office Automation</Link>
+            <Link href="/offers">Special Offers</Link>
           </li>
           <li className="mt-4 text-white text-sm font-semibold">
-            <Link href="/guidance">Artemis Guidance System</Link>
+            <Link href="/flight">Flights</Link>
+          </li>
+          <li className="mt-4 text-white text-sm font-semibold">
+            <Link href="/hotels">Hotels</Link>
           </li>
         </ul>
       </div>
@@ -113,11 +112,8 @@ const Footer = () => {
             aria-controls="panel2a-content"
             id="panel2a-header"
             sx={{ borderBottom: "2px solid white", padding: "0", margin: "0" }}
-            
           >
-            <Typography
-              className="text-center text-white font-bold"
-            >
+            <Typography className="text-center text-white font-bold">
               Contact Us
             </Typography>
           </AccordionSummary>
@@ -126,20 +122,19 @@ const Footer = () => {
               <li className="flex gap-3 mb-4 mt-4">
                 <PhoneEnabled className="text-white" />
                 <Typography sx={{ fontWeight: "600", fontSize: "1rem" }}>
-                  021-91008802
+                  021-9100****
                 </Typography>
               </li>
               <li className="flex gap-3 mb-4">
                 <Email className="text-white" />
                 <Typography sx={{ fontWeight: "600", fontSize: "1rem" }}>
-                  info@artemist.com
+                  info@company.com
                 </Typography>
               </li>
               <li className="flex mt-4">
-                <Place className="text-white mr-3" />
+                <Place className="text-white mr-3 mt-4" />
                 <Typography sx={{ fontWeight: "600", fontSize: "1rem" }}>
-                  Karaj, Haft-e-Tir Square, Beginning of Belal Blvd, Naderi
-                  Alley, Kristal Building, Unit 2, 2nd Floor
+                  Karaj, Haft-e-Tir Square, Beginning of Second Blvd, 5th Alley
                 </Typography>
               </li>
             </ul>
@@ -172,24 +167,24 @@ const Footer = () => {
           </AccordionSummary>
           <AccordionDetails>
             <ul className="text-blue">
-              <li className="mb-4 mt-4 font-bold">
-                <Link href="/" underline="none">
-                  Home
+              <li className="mb-4 font-bold">
+                <Link href="/tours" underline="none">
+                  Our Best Tours
                 </Link>
               </li>
               <li className="mb-4 font-bold">
-                <Link href="/about" underline="none">
-                  About Us
-                </Link>
-              </li>
-              <li className="mb-4 font-bold">
-                <Link href="/automation" underline="none">
-                  Office Automation
+                <Link href="/offers" underline="none">
+                  Special Offers
                 </Link>
               </li>
               <li className="mt-4 font-bold">
-                <Link href="/guidance" underline="none">
-                  Artemis Guidance System
+                <Link href="/flights" underline="none">
+                  Flights
+                </Link>
+              </li>
+              <li className="mt-4 font-bold">
+                <Link href="/hotels" underline="none">
+                  Hotels
                 </Link>
               </li>
             </ul>

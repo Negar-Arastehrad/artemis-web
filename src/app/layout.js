@@ -2,7 +2,6 @@ import localFont from "next/font/local";
 import { Figtree } from "next/font/google";
 import "./globals.css";
 import Navbar from "./_Components/Navbar";
-import RTL from "./_Components/RTL";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from './theme'
 import Footer from "./_Components/Footer";
