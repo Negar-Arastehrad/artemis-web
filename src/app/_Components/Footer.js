@@ -121,19 +121,28 @@ const Footer = () => {
             <ul className="text-blue">
               <li className="flex gap-3 mb-4 mt-4">
                 <PhoneEnabled className="text-white" />
-                <Typography sx={{ fontWeight: "600", fontSize: "1rem" }}>
+                <Typography
+                  sx={{ fontWeight: "600", fontSize: "1rem" }}
+                  component="span"
+                >
                   021-9100****
                 </Typography>
               </li>
               <li className="flex gap-3 mb-4">
                 <Email className="text-white" />
-                <Typography sx={{ fontWeight: "600", fontSize: "1rem" }}>
+                <Typography
+                  sx={{ fontWeight: "600", fontSize: "1rem" }}
+                  component="span"
+                >
                   info@company.com
                 </Typography>
               </li>
               <li className="flex mt-4">
                 <Place className="text-white mr-3 mt-4" />
-                <Typography sx={{ fontWeight: "600", fontSize: "1rem" }}>
+                <Typography
+                  sx={{ fontWeight: "600", fontSize: "1rem" }}
+                  component="span"
+                >
                   Karaj, Haft-e-Tir Square, Beginning of Second Blvd, 5th Alley
                 </Typography>
               </li>

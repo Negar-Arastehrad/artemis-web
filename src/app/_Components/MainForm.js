@@ -101,6 +101,7 @@ const MainForm = () => {
           helperText={
             <Typography
               sx={{ fontSize: "1rem", fontWeight: "bold", color: "white" }}
+              component="span"
             >
               {errors.email?.message}
             </Typography>
@@ -122,6 +123,7 @@ const MainForm = () => {
           helperText={
             <Typography
               sx={{ fontSize: "1rem", fontWeight: "bold", color: "white" }}
+              component="span"
             >
               {errors.password?.message}
             </Typography>
@@ -168,7 +170,10 @@ const MainForm = () => {
                 />
               }
               label={
-                <Typography sx={{ color: "white", fontWeight: "bold" }}>
+                <Typography
+                  sx={{ color: "white", fontWeight: "bold" }}
+                  component="span"
+                >
                   Remember Me
                 </Typography>
               }
