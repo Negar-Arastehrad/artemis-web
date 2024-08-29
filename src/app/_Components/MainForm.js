@@ -26,15 +26,19 @@ import { z } from "zod";
 //MUI Styles
 const TextFieldStyle = {
   "& .MuiInputLabel-root.Mui-focused": {
-    color: "blue", // Label color on focus
+    color: "white", // Label color on focus
   },
   "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": {
-    borderColor: "blue", // Border color when focused
+    borderColor: "white", // Border color when focused
   },
   "& .MuiOutlinedInput-root": {
     borderRadius: ".75rem", // Border Radius
+    backgroundColor: "blue", // Blue background color
+    "& input": {
+      color: "white", // White text color inside the input
+    },
     "&:hover fieldset": {
-      borderColor: "blue", // Border color on hover
+      borderColor: "white", // Border color on hover
     },
   },
   marginTop: "2rem",
@@ -47,9 +51,9 @@ const MainForm = () => {
   const LoginSchema = z.object({
     email: z
       .string()
-      .min(1, { message: "Email address is required" })
+      .min(1, { message: "Email address is required!" })
       .email("Invalid email address"),
-    password: z.string().min(1, { message: "Password is required" }),
+    password: z.string().min(1, { message: "Password is required!" }),
     checkBox: z.boolean(),
   });
 
@@ -66,20 +70,20 @@ const MainForm = () => {
   };
 
   return (
-    <div className="w-full h-full tracking-wider flex justify-center items-center">
+    <div className="w-full h-full tracking-wider flex justify-center items-center  xl:ml-20">
       <Box
         component="form"
         noValidate
         onSubmit={handleSubmit(onSubmit)}
-        className="m-auto rounded-xl px-8 py-6 bg-glass"
-        sx={{ maxWidth: "550px", width: "100%" }}
+        className=" px-8 "
+        sx={{ width: "90%" }}
       >
         <Typography
-          variant="h4"
           sx={{
-            color: "blue",
+            color: "white",
             fontWeight: "bold",
             textAlign: "center",
+            fontSize: "2.5rem",
           }}
         >
           Welcome!
@@ -95,13 +99,15 @@ const MainForm = () => {
           {...register("email")}
           error={!!errors.email}
           helperText={
-            <Typography sx={{ fontSize: "1rem", fontWeight: "bold" }}>
+            <Typography
+              sx={{ fontSize: "1rem", fontWeight: "bold", color: "white" }}
+            >
               {errors.email?.message}
             </Typography>
           }
-          sx={{ ...TextFieldStyle, mb: 1 }} // Adjust the margin-bottom
+          sx={{ ...TextFieldStyle, mb: 1 }}
           InputLabelProps={{
-            sx: { fontSize: "1rem", fontWeight: "bold" },
+            sx: { fontSize: "1rem", fontWeight: "bold", color: "white" },
           }}
         />
 
@@ -114,7 +120,9 @@ const MainForm = () => {
           {...register("password")}
           error={!!errors.password}
           helperText={
-            <Typography sx={{ fontSize: "1rem", fontWeight: "bold" }}>
+            <Typography
+              sx={{ fontSize: "1rem", fontWeight: "bold", color: "white" }}
+            >
               {errors.password?.message}
             </Typography>
           }
@@ -127,26 +135,40 @@ const MainForm = () => {
                   onClick={() => setShowPassword(!showPassword)}
                   onMouseDown={(e) => e.preventDefault()}
                   edge="end"
+                  sx={{ color: "white" }}
                 >
                   {showPassword ? <VisibilityOff /> : <Visibility />}
                 </IconButton>
               </InputAdornment>
             ),
           }}
-          sx={{ ...TextFieldStyle, mt: 1 }} // Adjust the margin-top if needed
+          sx={{ ...TextFieldStyle, mt: 1 }}
           InputLabelProps={{
-            sx: { fontSize: "1rem", fontWeight: "bold" },
+            sx: { fontSize: "1rem", fontWeight: "bold", color: "white" },
           }}
         />
 
         {/* Others */}
-        <div className="flex flex-col items-start lg:flex-row lg:items-center justify-between mt-1">
+        <div className="flex flex-col items-start lg:flex-row lg:items-center justify-between">
           <FormGroup sx={{ marginLeft: "-.8rem" }}>
             <FormControlLabel
               labelPlacement="start"
-              control={<Checkbox {...register("checkBox")} />}
+              control={
+                <Checkbox
+                  {...register("checkBox")}
+                  sx={{
+                    color: "white",
+                    "&.Mui-checked": {
+                      color: "white",
+                    },
+                    "& .MuiSvgIcon-root": {
+                      fill: "white",
+                    },
+                  }}
+                />
+              }
               label={
-                <Typography sx={{ color: "blue", fontWeight: "bold" }}>
+                <Typography sx={{ color: "white", fontWeight: "bold" }}>
                   Remember Me
                 </Typography>
               }
@@ -157,7 +179,7 @@ const MainForm = () => {
             variant="body2"
             underline="hover"
             sx={{
-              color: "blue",
+              color: "white",
               fontWeight: "bold",
               fontSize: "1rem",
               marginLeft: ".2rem",
@@ -180,21 +202,24 @@ const MainForm = () => {
             marginY: "2rem",
             fontSize: "1.1rem",
             fontWeight: "bold",
+            "&:hover": {
+              background: `linear-gradient(90deg, hsla(210, 100%, 25%, 1) 0%, hsla(15, 100%, 75%, 1) 100%)`,
+            },
           }}
         >
           Log in
         </Button>
 
         <Box display="flex" alignItems="center">
-          <Divider sx={{ flexGrow: 1 }} className="bg-slate-600" />
+          <Divider sx={{ flexGrow: 1, backgroundColor: "#FF9F80" }} />
           <Typography
             variant="body1"
             sx={{ mx: 2, fontSize: "1rem", fontWeight: "bold" }}
-            className="text-slate-600"
+            className="text-[#FF9F80]"
           >
             Don&apos;t have an account?
           </Typography>
-          <Divider sx={{ flexGrow: 1 }} className="bg-slate-600" />
+          <Divider sx={{ flexGrow: 1, backgroundColor: "#FF9F80" }} />
         </Box>
 
         {/* Btns */}
@@ -203,8 +228,8 @@ const MainForm = () => {
             component="a"
             href="/counter-registration"
             sx={{
-              borderColor: "blue",
-              color: "blue",
+              background: `linear-gradient(90deg, hsla(15, 100%, 75%, 1) 0%, hsla(210, 100%, 25%, 1) 100%);`,
+              color: "white",
               paddingY: ".6rem",
               paddingX: "1.2rem",
               borderRadius: ".75rem",
@@ -213,12 +238,12 @@ const MainForm = () => {
               fontWeight: "bold",
               transition: "all 0.4s ease",
               "&:hover": {
-                background: `linear-gradient(90deg, hsla(15, 100%, 75%, 1) 0%, hsla(210, 100%, 25%, 1) 100%);`,
+                background: `linear-gradient(90deg, hsla(210, 100%, 25%, 1) 0%, hsla(15, 100%, 75%, 1) 100%)`,
                 color: "white",
                 border: "none",
               },
             }}
-            variant="outlined"
+            variant="contained"
             startIcon={<Person />}
           >
             Counter Registration
@@ -228,8 +253,8 @@ const MainForm = () => {
             component="a"
             href="/agency-registration"
             sx={{
-              borderColor: "blue",
-              color: "blue",
+              background: `linear-gradient(90deg, hsla(15, 100%, 75%, 1) 0%, hsla(210, 100%, 25%, 1) 100%);`,
+              color: "white",
               paddingY: ".6rem",
               paddingX: "1.2rem",
               borderRadius: ".75rem",
@@ -238,12 +263,12 @@ const MainForm = () => {
               fontWeight: "bold",
               transition: "all 0.4s ease",
               "&:hover": {
-                background: `linear-gradient(90deg, hsla(15, 100%, 75%, 1) 0%, hsla(210, 100%, 25%, 1) 100%);`,
+                background: `linear-gradient(90deg, hsla(210, 100%, 25%, 1) 0%, hsla(15, 100%, 75%, 1) 100%)`,
                 color: "white",
                 border: "none",
               },
             }}
-            variant="outlined"
+            variant="contained"
             startIcon={<PeopleAlt />}
           >
             Agency Registration
