@@ -17,7 +17,7 @@ const figtree = Figtree({
 export const champagneLimousines = localFont({
   src: [
     {
-      path: "../../public/fonts/ttf/champagne-limousines-bold.ttf",
+      path: "../../public/fonts/ttf/champagnelimousinesbold.ttf",
       weight: "700",
       style: "normal",
     },
