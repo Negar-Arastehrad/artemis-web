@@ -17,22 +17,22 @@ const figtree = Figtree({
 export const champagneLimousines = localFont({
   src: [
     {
-      path: "/fonts/ttf/champagne-limousines-bold-italic.ttf",
+      path: "../../public/fonts/ttf/champagne-limousines-bold-italic.ttf",
       weight: "700",
       style: "italic",
     },
     {
-      path: "/fonts/ttf/champagne-limousines-bold.ttf",
+      path: "../../public/fonts/ttf/champagne-limousines-bold.ttf",
       weight: "700",
       style: "normal",
     },
     {
-      path: "/fonts/ttf/champagne-limousines-italic.ttf",
+      path: "../../public/fonts/ttf/champagne-limousines-italic.ttf",
       weight: "400",
       style: "italic",
     },
     {
-      path: "/fonts/ttf/champagne-limousines.ttf",
+      path: "../../public/fonts/ttf/champagne-limousines.ttf",
       weight: "400",
       style: "normal",
     },
