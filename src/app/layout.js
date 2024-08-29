@@ -43,7 +43,7 @@ export const kalameh = localFont({
   src: [
     // Regular Kalameh fonts
     {
-      path: "../../public/fonts/woff2/kalamehWeb-thin.woff2",
+      path: "../../public/fonts/woff2/kalamehweb-thin.woff2",
       weight: "100",
       style: "normal",
     },
