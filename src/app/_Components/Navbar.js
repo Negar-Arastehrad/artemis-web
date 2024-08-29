@@ -59,8 +59,8 @@ const Navbar = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <ul className="hidden md:flex items-center justify-center w-full text-blue text-center rounded-full font-bold text-lg">
-            <li className="border-r-2 border-gray pr-2 xl:pr-7">
+          <ul className="hidden md:flex items-center justify-center w-full text-blue text-center rounded-full">
+            <li className="border-r-2 border-gray pr-2 xl:pr-6">
               <Link
                 href="/"
                 className={`nav-li ${
@@ -70,7 +70,7 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-            <li className="border-r-2 border-gray px-2 xl:px-7">
+            <li className="border-r-2 border-gray px-2 xl:px-6">
               <Link
                 href="/about"
                 className={`nav-li ${
@@ -80,7 +80,7 @@ const Navbar = () => {
                 Our Best Tours
               </Link>
             </li>
-            <li className="border-r-2 border-gray px-2 xl:px-7">
+            <li className="border-r-2 border-gray px-2 xl:px-6">
               <Link
                 href="/about"
                 className={`nav-li ${
@@ -90,7 +90,7 @@ const Navbar = () => {
                 Special Offers
               </Link>
             </li>
-            <li className="border-r-2 border-gray px-2 xl:px-7">
+            <li className="border-r-2 border-gray px-2 xl:px-6">
               <Link
                 href="/automation"
                 className={`nav-li ${
@@ -100,7 +100,7 @@ const Navbar = () => {
                 Flights
               </Link>
             </li>
-            <li className="pl-2 xl:pl-7">
+            <li className="pl-2 xl:pl-6">
               <Link
                 href="/guidance"
                 className={`nav-li ${
@@ -142,7 +142,7 @@ const Navbar = () => {
         <ul
           className={`${
             nav ? "block" : "hidden"
-          } absolute top-[50%] left-0 w-full bg-white rounded-b-3xl text-blue font-bold py-4 z-10 text-lg lg:hidden`}
+          } absolute top-[50%] left-0 w-full bg-white rounded-b-3xl text-blue py-4 z-10  lg:hidden`}
         >
           <li
             onClick={closeNav}

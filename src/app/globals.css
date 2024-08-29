@@ -11,8 +11,10 @@
 
   body {
     @apply bg-back-photo bg-cover lg:bg-bottom;
-    font-family: var(--font-champagne-limousines);
+    /* font-family: var(--font-champagne-limousines); */
+    font-family: var(--font-rubik);
   }
+  
 
   ul {
     list-style: none;

@@ -1,20 +1,22 @@
 import localFont from "next/font/local";
-import { Figtree } from "next/font/google";
+import { Rubik } from "next/font/google";
 import "./globals.css";
 import Navbar from "./_Components/Navbar";
 import { ThemeProvider } from "@mui/material/styles";
-import theme from './theme'
+import theme from "./theme";
 import Footer from "./_Components/Footer";
 
-const figtree = Figtree({
+const rubik = Rubik({
   display: "swap",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-figtree",
+  variable: "--font-rubik",
 });
 
-
-export const champagneLimousines = localFont({
+// Local Fonts
+{
+  /*
+  export const champagneLimousines = localFont({
   src: [
     {
       path: "../../public/fonts/ttf/champagnelimousinesbold.ttf",
@@ -24,8 +26,11 @@ export const champagneLimousines = localFont({
   ],
   variable: "--font-champagne-limousines",
 });
+  */
+}
 
-{/*
+{
+  /*
   export const kalameh = localFont({
   src: [
     // Regular Kalameh fonts
@@ -171,8 +176,8 @@ export const champagneLimousines = localFont({
   ],
   variable: "--font-kalameh",
 });
-  */}
-
+  */
+}
 
 export const metadata = {
   title: "Artemist",
@@ -181,9 +186,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html className={`dark ${figtree.variable} ${champagneLimousines.variable}`}>
+    <html className={`dark ${rubik.variable}`}>
+      {" "}
+      {/*${champagneLimousines.variable}*/}
       <body>
-      <ThemeProvider theme={theme}>
+        <ThemeProvider theme={theme}>
           <Navbar />
           <main>{children}</main>
           <Footer />

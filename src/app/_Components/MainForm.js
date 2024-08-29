@@ -70,7 +70,7 @@ const MainForm = () => {
   };
 
   return (
-    <div className="w-full h-full tracking-wider flex justify-center items-center  xl:ml-20">
+    <div className="w-full h-full tracking-wider flex justify-center items-center xl:ml-20">
       <Box
         component="form"
         noValidate
@@ -83,7 +83,7 @@ const MainForm = () => {
             color: "white",
             fontWeight: "bold",
             textAlign: "center",
-            fontSize: "2.5rem",
+            fontSize: "2rem",
           }}
         >
           Welcome!
@@ -99,16 +99,13 @@ const MainForm = () => {
           {...register("email")}
           error={!!errors.email}
           helperText={
-            <Typography
-              sx={{ fontSize: "1rem", fontWeight: "bold", color: "white" }}
-              component="span"
-            >
+            <Typography sx={{ color: "white" }} component="span">
               {errors.email?.message}
             </Typography>
           }
           sx={{ ...TextFieldStyle, mb: 1 }}
           InputLabelProps={{
-            sx: { fontSize: "1rem", fontWeight: "bold", color: "white" },
+            sx: { color: "white" },
           }}
         />
 
@@ -121,10 +118,7 @@ const MainForm = () => {
           {...register("password")}
           error={!!errors.password}
           helperText={
-            <Typography
-              sx={{ fontSize: "1rem", fontWeight: "bold", color: "white" }}
-              component="span"
-            >
+            <Typography sx={{ color: "white" }} component="span">
               {errors.password?.message}
             </Typography>
           }
@@ -146,7 +140,7 @@ const MainForm = () => {
           }}
           sx={{ ...TextFieldStyle, mt: 1 }}
           InputLabelProps={{
-            sx: { fontSize: "1rem", fontWeight: "bold", color: "white" },
+            sx: { color: "white" },
           }}
         />
 
@@ -170,10 +164,7 @@ const MainForm = () => {
                 />
               }
               label={
-                <Typography
-                  sx={{ color: "white", fontWeight: "bold" }}
-                  component="span"
-                >
+                <Typography sx={{ color: "white" }} component="span">
                   Remember Me
                 </Typography>
               }
@@ -185,8 +176,6 @@ const MainForm = () => {
             underline="hover"
             sx={{
               color: "white",
-              fontWeight: "bold",
-              fontSize: "1rem",
               marginLeft: ".2rem",
             }}
           >
@@ -205,7 +194,7 @@ const MainForm = () => {
             paddingY: ".7rem",
             borderRadius: ".75rem",
             marginY: "2rem",
-            fontSize: "1.1rem",
+            fontSize: "1rem",
             fontWeight: "bold",
             "&:hover": {
               background: `linear-gradient(90deg, hsla(210, 100%, 25%, 1) 0%, hsla(15, 100%, 75%, 1) 100%)`,
@@ -219,7 +208,7 @@ const MainForm = () => {
           <Divider sx={{ flexGrow: 1, backgroundColor: "#FF9F80" }} />
           <Typography
             variant="body1"
-            sx={{ mx: 2, fontSize: "1rem", fontWeight: "bold" }}
+            sx={{ mx: 2, fontSize: "1rem" }}
             className="text-[#FF9F80]"
           >
             Don&apos;t have an account?
@@ -239,8 +228,7 @@ const MainForm = () => {
               paddingX: "1.2rem",
               borderRadius: ".75rem",
               textTransform: "none",
-              fontSize: "1.1rem",
-              fontWeight: "bold",
+              fontSize: "1rem",
               transition: "all 0.4s ease",
               "&:hover": {
                 background: `linear-gradient(90deg, hsla(210, 100%, 25%, 1) 0%, hsla(15, 100%, 75%, 1) 100%)`,
@@ -264,8 +252,7 @@ const MainForm = () => {
               paddingX: "1.2rem",
               borderRadius: ".75rem",
               textTransform: "none",
-              fontSize: "1.1rem",
-              fontWeight: "bold",
+              fontSize: "1rem",
               transition: "all 0.4s ease",
               "&:hover": {
                 background: `linear-gradient(90deg, hsla(210, 100%, 25%, 1) 0%, hsla(15, 100%, 75%, 1) 100%)`,
