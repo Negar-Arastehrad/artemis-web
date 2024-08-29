@@ -16,22 +16,22 @@ const figtree = Figtree({
 export const champagneLimousines = localFont({
   src: [
     {
-      path: "../../public/fonts/ttf/Champagne-Limousines-Bold-Italic.ttf",
+      path: "../../public/fonts/ttf/champagne-limousines-bold-italic.ttf",
       weight: "700",
       style: "italic",
     },
     {
-      path: "../../public/fonts/ttf/Champagne-Limousines-Bold.ttf",
+      path: "../../public/fonts/ttf/champagne-limousines-bold.ttf",
       weight: "700",
       style: "normal",
     },
     {
-      path: "../../public/fonts/ttf/Champagne-Limousines-Italic.ttf",
+      path: "../../public/fonts/ttf/champagne-limousines-italic.ttf",
       weight: "400",
       style: "italic",
     },
     {
-      path: "../../public/fonts/ttf/Champagne-Limousines.ttf",
+      path: "../../public/fonts/ttf/champagne-limousines.ttf",
       weight: "400",
       style: "normal",
     },
@@ -43,141 +43,141 @@ export const kalameh = localFont({
   src: [
     // Regular Kalameh fonts
     {
-      path: "../../public/fonts/woff2/KalamehWeb-Thin.woff2",
+      path: "../../public/fonts/woff2/kalamehWeb-thin.woff2",
       weight: "100",
       style: "normal",
     },
     {
-      path: "../../public/fonts/woff2/KalamehWeb-ExtraLight.woff2",
+      path: "../../public/fonts/woff2/kalamehweb-extralight.woff2",
       weight: "200",
       style: "normal",
     },
     {
-      path: "../../public/fonts/woff2/KalamehWeb-Light.woff2",
+      path: "../../public/fonts/woff2/kalamehweb-light.woff2",
       weight: "300",
       style: "normal",
     },
     {
-      path: "../../public/fonts/woff2/KalamehWeb-Regular.woff2",
+      path: "../../public/fonts/woff2/Kalamehweb-regular.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../../public/fonts/woff2/KalamehWeb-Medium.woff2",
+      path: "../../public/fonts/woff2/Kalamehweb-medium.woff2",
       weight: "500",
       style: "normal",
     },
     {
-      path: "../../public/fonts/woff2/KalamehWeb-SemiBold.woff2",
+      path: "../../public/fonts/woff2/kalamehweb-semibold.woff2",
       weight: "600",
       style: "normal",
     },
     {
-      path: "../../public/fonts/woff2/KalamehWeb-Bold.woff2",
+      path: "../../public/fonts/woff2/kalamehweb-bold.woff2",
       weight: "700",
       style: "normal",
     },
     {
-      path: "../../public/fonts/woff2/KalamehWeb-ExtraBold.woff2",
+      path: "../../public/fonts/woff2/kalamehweb-extrabold.woff2",
       weight: "800",
       style: "normal",
     },
     {
-      path: "../../public/fonts/woff2/KalamehWeb-Black.woff2",
+      path: "../../public/fonts/woff2/kalamehweb-black.woff2",
       weight: "900",
       style: "normal",
     },
 
     // Kalameh with Farsi Numerals (FaNum)
     {
-      path: "../../public/fonts/woff2/KalamehWebFaNum-Thin.woff2",
+      path: "../../public/fonts/woff2/kalamehwebfanum-thin.woff2",
       weight: "100",
       style: "normal",
     },
     {
-      path: "../../public/fonts/woff2/KalamehWebFaNum-ExtraLight.woff2",
+      path: "../../public/fonts/woff2/kalamehwebfanum-extralight.woff2",
       weight: "200",
       style: "normal",
     },
     {
-      path: "../../public/fonts/woff2/KalamehWebFaNum-Light.woff2",
+      path: "../../public/fonts/woff2/kalamehwebfanum-light.woff2",
       weight: "300",
       style: "normal",
     },
     {
-      path: "../../public/fonts/woff2/KalamehWebFaNum-Regular.woff2",
+      path: "../../public/fonts/woff2/kalamehwebfanum-regular.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../../public/fonts/woff2/KalamehWebFaNum-Medium.woff2",
+      path: "../../public/fonts/woff2/kalamehwebfanum-medium.woff2",
       weight: "500",
       style: "normal",
     },
     {
-      path: "../../public/fonts/woff2/KalamehWebFaNum-SemiBold.woff2",
+      path: "../../public/fonts/woff2/Kalamehwebfanum-semibold.woff2",
       weight: "600",
       style: "normal",
     },
     {
-      path: "../../public/fonts/woff2/KalamehWebFaNum-Bold.woff2",
+      path: "../../public/fonts/woff2/Kalamehwebfanum-bold.woff2",
       weight: "700",
       style: "normal",
     },
     {
-      path: "../../public/fonts/woff2/KalamehWebFaNum-ExtraBold.woff2",
+      path: "../../public/fonts/woff2/Kalamehwebfanum-extrabold.woff2",
       weight: "800",
       style: "normal",
     },
     {
-      path: "../../public/fonts/woff2/KalamehWebFaNum-Black.woff2",
+      path: "../../public/fonts/woff2/Kalamehwebfanum-black.woff2",
       weight: "900",
       style: "normal",
     },
 
     // Kalameh No English (NoEn)
     {
-      path: "../../public/fonts/woff2/KalamehWebNoEn-Thin.woff2",
+      path: "../../public/fonts/woff2/kalamehwebnoen-thin.woff2",
       weight: "100",
       style: "normal",
     },
     {
-      path: "../../public/fonts/woff2/KalamehWebNoEn-ExtraLight.woff2",
+      path: "../../public/fonts/woff2/kalamehwebnoen-extralight.woff2",
       weight: "200",
       style: "normal",
     },
     {
-      path: "../../public/fonts/woff2/KalamehWebNoEn-Light.woff2",
+      path: "../../public/fonts/woff2/kalamehwebnoen-light.woff2",
       weight: "300",
       style: "normal",
     },
     {
-      path: "../../public/fonts/woff2/KalamehWebNoEn-Regular.woff2",
+      path: "../../public/fonts/woff2/kalamehwebnoen-regular.woff2",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../../public/fonts/woff2/KalamehWebNoEn-Medium.woff2",
+      path: "../../public/fonts/woff2/kalamehwebnoen-medium.woff2",
       weight: "500",
       style: "normal",
     },
     {
-      path: "../../public/fonts/woff2/KalamehWebNoEn-SemiBold.woff2",
+      path: "../../public/fonts/woff2/Kalamehwebnoen-semibold.woff2",
       weight: "600",
       style: "normal",
     },
     {
-      path: "../../public/fonts/woff2/KalamehWebNoEn-Bold.woff2",
+      path: "../../public/fonts/woff2/Kalamehwebnoen-bold.woff2",
       weight: "700",
       style: "normal",
     },
     {
-      path: "../../public/fonts/woff2/KalamehWebNoEn-ExtraBold.woff2",
+      path: "../../public/fonts/woff2/Kalamehwebnoen-extrabold.woff2",
       weight: "800",
       style: "normal",
     },
     {
-      path: "../../public/fonts/woff2/KalamehWebNoEn-Black.woff2",
+      path: "../../public/fonts/woff2/Kalamehwebnoen-black.woff2",
       weight: "900",
       style: "normal",
     },
