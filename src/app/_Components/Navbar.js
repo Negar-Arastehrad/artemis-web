@@ -72,7 +72,7 @@ const Navbar = () => {
             </li>
             <li className="border-r-2 border-gray px-2 xl:px-6">
               <Link
-                href="/about"
+                href="/tours"
                 className={`nav-li ${
                   pathname === "/tours" ? "border-b-2 border-blue" : ""
                 }`}
@@ -82,7 +82,7 @@ const Navbar = () => {
             </li>
             <li className="border-r-2 border-gray px-2 xl:px-6">
               <Link
-                href="/about"
+                href="/offers"
                 className={`nav-li ${
                   pathname === "/offers" ? "border-b-2 border-blue" : ""
                 }`}
@@ -92,7 +92,7 @@ const Navbar = () => {
             </li>
             <li className="border-r-2 border-gray px-2 xl:px-6">
               <Link
-                href="/automation"
+                href="/flights"
                 className={`nav-li ${
                   pathname === "/flights" ? "border-b-2 border-blue" : ""
                 }`}
@@ -102,7 +102,7 @@ const Navbar = () => {
             </li>
             <li className="pl-2 xl:pl-6">
               <Link
-                href="/guidance"
+                href="/hotels"
                 className={`nav-li ${
                   pathname === "/hotels" ? "border-b-2 border-blue" : ""
                 }`}

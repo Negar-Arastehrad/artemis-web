@@ -10,11 +10,9 @@
   }
 
   body {
-    @apply bg-back-photo bg-cover lg:bg-bottom;
     /* font-family: var(--font-champagne-limousines); */
     font-family: var(--font-rubik);
   }
-  
 
   ul {
     list-style: none;
@@ -37,9 +35,9 @@
   }
 
   .clouds {
-    @apply bg-clouds bg-cover bg-center relative; 
+    @apply bg-clouds bg-cover bg-center relative;
   }
-  
+
   .clouds::after {
     background-color: black;
     content: "";
@@ -50,7 +48,7 @@
     left: 0;
     opacity: 0.2;
     border-radius: 0.75rem;
-    z-index: 20; 
+    z-index: 20;
   }
 
   @keyframes borderMove {
@@ -63,7 +61,8 @@
   }
 
   @keyframes pulse {
-    0%, 100% {
+    0%,
+    100% {
       transform: scale(1);
     }
     50% {
